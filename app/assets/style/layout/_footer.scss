@@ -1,0 +1,55 @@
+.footer {
+    background: $teal-200;
+    a {
+        color: black;
+        &:hover {
+            color: $gray-600;
+        }
+    }
+
+    &-Link {
+        &-Menu {
+            display: none;
+            font-size: 20px;
+            @include md() {
+                @include flexBetween;
+            }
+        }
+
+        &-Social {
+            @include flexCenter;
+            li {
+                margin-right: 20%;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            @include md() {
+                @include flexAround;
+            }
+        }
+    }
+
+    &-Copyright {
+
+        p {
+            color:#000;
+            margin-bottom: 24px;
+        }
+
+        @include md() {
+            p {
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+            }
+
+            ul {
+                @include flexCenter;
+                li:first-child {
+                    margin-right: 45%;
+                }
+            }
+        }
+    }
+}
