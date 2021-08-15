@@ -1,5 +1,6 @@
 .footer {
     background: $teal-200;
+    @include sectionPadding(56px,60px);
     a {
         color: black;
         &:hover {

@@ -1,13 +1,18 @@
 .header {
+    // position: fixed;
+    // margin: 0 auto !important;
+    // top:0;
+    // width: 100%;
+    // z-index: 1;
     &-FirstRow {
         background: $teal-200;
     }
 
     &-logo a {
         display: block;
-        width: 225px;
-        height: 60px;
-        background: url(../images/logo.png) no-repeat;
+        width: 115px;
+        height: 30px;
+        background: url(../images/logo_sm.png) no-repeat;
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
@@ -15,12 +20,32 @@
             opacity: 0.65;
             transition: .5s;
         }
+
+        @include md() {
+            width: 225px;
+            height: 60px;
+            background: url(../images/logo.png) no-repeat;
+        }
     }
 
     &-Login {
+        button {
+            background: none;
+        }
+
+        a {
+            display: none;
+        }
+
         span {
-            display: inline;
-            @include md {
+            @include flex
+        }
+
+        @include md {
+            a {
+                display: inline;
+            }
+            span {
                 display: none;
             }
         }
@@ -33,20 +58,26 @@
         font-size: 20px;
         background: $teal-400;
 
-        li a{
-            color: #000;
-            &:hover {
-                background: $teal-200;
+        li{
+            padding-left: 24px;
+            a{
                 color: #000;
+                &:hover {
+                    background: $teal-200;
+                    color: #000;
+                }
             }
         }
 
         @include md {
             font-size: 26px;
             background: $teal-400;
-            li a:hover{
-                background: none;
-                color: $gray-600 ;
+            li {
+                padding-left: 0;
+                a:hover{
+                    background: none;
+                    color: $gray-600 ;
+                }
             }
         }
     }
