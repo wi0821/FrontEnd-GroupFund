@@ -18,36 +18,41 @@
   <body>
 
     <header>
-      <div class="d-flex justify-content-between align-items-center py-5 px-8 header-FirstRow">
-        <h1 class="header-logo"><a href="index.html">團體共用基金系統</a></h1>
-        <h4 class="header-Login">
-          <a href="#" class="me-1 btn btn-danger px-4 py-2" data-bs-toggle="modal" data-bs-target="#LoginModal">會員登入</a>
-          <span>
-            <button class="navbar-toggler text-success" type="button" data-bs-toggle="collapse" data-bs-target="#header-List" aria-controls="header-List" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-bars fa-lg"></i>
-            </button>
-          </span>
-        </h4>
-      </div>
-
-      <nav class="navbar navbar-expand-md p-0">
-        <div class="collapse navbar-collapse" id="header-List">
-          <ul class="navbar-nav header-List">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">成功案例</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">流程教學</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">常見問題</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">關於我們</a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-5 px-8 header-FirstRow">
+          <h1 class="header-logo"><a href="index.html">團體共用基金系統</a></h1>
+          <div class="header-Login d-flex align-items-center">
+            <button href="#" class="me-1 btn btn-danger px-4 py-2" data-bs-toggle="modal" data-bs-target="#LoginModal">會員登入</button>
+            <span>
+              <a href="#" class="me-1 px-4 py-2" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                <i class="bi bi-person-circle fa-2x"></i>
+              </a>
+              <a class="navbar-toggler text-success" type="button" data-bs-toggle="collapse" data-bs-target="#header-List" aria-controls="header-List" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fa-lg"></i>
+              </a>
+            </span>
+          </div>
         </div>
-      </nav>
+
+        <nav class="navbar navbar-expand-md p-0">
+          <div class="collapse navbar-collapse" id="header-List">
+            <ul class="navbar-nav header-List">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">成功案例</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">流程教學</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">常見問題</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     
@@ -148,10 +153,10 @@
     </div>
     <!-- 登入頁面 -->
 
-    <footer class="footer py-5 px-8">
+    <footer class="footer px-8">
       <div class="container">
         <div class="row mb-10">
-          <ul class="footer-Link-Menu col-md-10">
+          <ul class="footer-Link-Menu col-md-9">
             <li><a href="index.html">首頁</a></li>
             <li><a href="#">成功案例</a></li>
             <li><a href="#">流程教學</a></li>
@@ -159,7 +164,7 @@
             <li><a href="#">關於我們</a></li>
           </ul>
 
-          <ul class="footer-Link-Social col-md-2">
+          <ul class="footer-Link-Social col-md-3">
             <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
             <li><a href="#"><i class="fab fa-line fa-2x"></i></a></li>
@@ -167,8 +172,8 @@
         </div>
 
         <div class="row footer-Copyright">
-          <p class="col-md-7">Copyright © 2021 團體共享金融系統 All rights reserved.</p>
-          <ul class="col-md-5">
+          <p class="col-md-12">Copyright © 2021 團體共享金融系統 All rights reserved.</p>
+          <ul class="col-md-12">
             <li><a href="#">隱私權政策</a></li>
             <li><a href="#">服務條款</a></li>
           </ul>

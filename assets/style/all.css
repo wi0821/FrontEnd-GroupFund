@@ -13384,9 +13384,9 @@ p {
 
 .header-logo a {
   display: block;
-  width: 225px;
-  height: 60px;
-  background: url(../images/logo.png) no-repeat;
+  width: 115px;
+  height: 30px;
+  background: url(../images/logo_sm.png) no-repeat;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -13399,11 +13399,26 @@ p {
   transition: .5s;
 }
 
+@media (min-width: 768px) {
+  .header-logo a {
+    width: 225px;
+    height: 60px;
+    background: url(../images/logo.png) no-repeat;
+  }
+}
+
+.header-Login button {
+  display: none;
+}
+
 .header-Login span {
   display: inline;
 }
 
 @media (min-width: 768px) {
+  .header-Login button {
+    display: inline;
+  }
   .header-Login span {
     display: none;
   }
@@ -13444,6 +13459,8 @@ p {
 
 .footer {
   background: #a6e9d5;
+  padding-top: 80px;
+  padding-bottom: 60px;
 }
 
 .footer a {
