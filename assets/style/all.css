@@ -13408,6 +13408,10 @@ p {
 }
 
 .header-Login button {
+  background: none;
+}
+
+.header-Login a {
   display: none;
 }
 
@@ -13416,7 +13420,7 @@ p {
 }
 
 @media (min-width: 768px) {
-  .header-Login button {
+  .header-Login a {
     display: inline;
   }
   .header-Login span {
@@ -13459,7 +13463,7 @@ p {
 
 .footer {
   background: #a6e9d5;
-  padding-top: 80px;
+  padding-top: 56px;
   padding-bottom: 60px;
 }
 
