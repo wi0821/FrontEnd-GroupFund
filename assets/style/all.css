@@ -13416,7 +13416,12 @@ p {
 }
 
 .header-Login span {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -13441,6 +13446,10 @@ p {
   background: #4dd4ac;
 }
 
+.header-List li {
+  padding-left: 24px;
+}
+
 .header-List li a {
   color: #000;
 }
@@ -13454,6 +13463,9 @@ p {
   .header-List {
     font-size: 26px;
     background: #4dd4ac;
+  }
+  .header-List li {
+    padding-left: 0;
   }
   .header-List li a:hover {
     background: none;
