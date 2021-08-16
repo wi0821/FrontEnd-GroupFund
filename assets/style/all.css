@@ -13378,6 +13378,12 @@ p {
   margin: 0;
 }
 
+input, button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .header-FirstRow {
   background: #a6e9d5;
 }
