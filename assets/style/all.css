@@ -13378,7 +13378,7 @@ p {
   margin: 0;
 }
 
-input, button {
+a, input, button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
