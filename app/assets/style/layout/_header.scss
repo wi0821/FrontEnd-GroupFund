@@ -4,6 +4,11 @@
     // top:0;
     // width: 100%;
     // z-index: 1;
+
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+
     &-FirstRow {
         background: $teal-200;
     }
