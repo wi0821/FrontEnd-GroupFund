@@ -17196,7 +17196,11 @@ a, input, button {
 }
 
 .footer-bottom a {
-  font-size: 16px;
+  font-size: 12px;
+}
+
+.footer-bottom button {
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -17213,6 +17217,7 @@ a, input, button {
   }
   .footer-bottom button {
     padding: 10px 18px;
+    font-size: 16px;
   }
 }
 
@@ -17398,7 +17403,7 @@ a, input, button {
 }
 
 .section {
-  padding: 40px;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
