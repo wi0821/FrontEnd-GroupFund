@@ -17376,7 +17376,7 @@ a, input, button {
   background-size: contain;
   border: 3px solid #000;
   border-radius: 20px;
-  padding: 30% 20px;
+  padding: 30% 0;
 }
 
 .section-bottom-1 h4, .section-bottom-1 .h4 {
