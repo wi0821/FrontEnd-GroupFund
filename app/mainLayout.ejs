@@ -52,10 +52,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="d-flex justify-content-between align-items-center footer-bottom">
-              <p class="mb-0">© 2021-2021 GroupFund .</p>
-              <p><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
-              <button type="button" class="btn btn-primary border rounded-pill">幫助</button>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+              <p class="mb-0">©2021 GroupFund.</p>
+              <p class="d-none d-md-block"><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
+              <p class="d-block d-md-none"><a href="">使用者條款</a><br><a href="">隱私權政策</a></p>
+              <button type="button" class="btn btn-primary border rounded-pill">幫 助</button>
             </div>
           </div>
         </div>
@@ -94,6 +95,12 @@
         center:true,
         responsiveClass:true,
         responsive:{
+            0: {
+              item:1
+            },
+            600: {
+              item:1
+            },
             1000:{
                 items:1
             }

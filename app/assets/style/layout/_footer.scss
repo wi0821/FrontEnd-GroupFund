@@ -18,7 +18,10 @@
 
     &-bottom {
         a {
-            font-size: 16px;
+            font-size: 12px;
+        }
+        button {
+            font-size: 14px;
         }
     }
 
@@ -37,6 +40,7 @@
             a {font-size: 20px;}
             button {
                 padding: 10px 18px;
+                font-size: 16px;
             }
         }
     }
