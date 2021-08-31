@@ -86,7 +86,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "black":      $black
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -250,16 +251,26 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: .5rem !default;
 $spacers: (
   0: 0,
-  1: $spacer *  .5,
-  2: $spacer,
-  3: $spacer * 1.5,
-  4: $spacer * 2,
+  1: $spacer *  .5, //4
+  2: $spacer,       //8
+  3: $spacer * 1.5, //12
+  4: $spacer * 2,   //16
   5: $spacer * 2.5,
   6: $spacer * 3,
   7: $spacer * 3.5,
   8: $spacer * 4,
   9: $spacer * 4.5,
   10: $spacer * 5,
+  11: $spacer * 5.5,
+  12: $spacer * 6,
+  13: $spacer * 6.5,
+  14: $spacer * 7,
+  15: $spacer * 7.5,
+  16: $spacer * 8,
+  17: $spacer * 8.5,
+  18: $spacer * 9,
+  19: $spacer * 9.5,
+  20: $spacer * 10, //80
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;

@@ -1,0 +1,19 @@
+.logo a {
+	display: block;
+    width: 115px;
+    height: 30px;
+	background: url(../images/logo_sm.png) no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	&:hover {
+		opacity: 0.65;
+		transition: .5s;
+	}
+
+	@include md() {
+		width: 225px;
+		height: 60px;
+		background: url(../images/logo.png) no-repeat;
+	}
+}

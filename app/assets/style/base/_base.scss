@@ -19,3 +19,7 @@ p {
 a,input,button {
     appearance: none !important;
 }
+
+*,*::before,*::after{
+    box-sizing: border-box;
+  }

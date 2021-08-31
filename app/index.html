@@ -1,55 +1,100 @@
 ---
 title: 團體共用基金系統
-layout: ./app/layout.ejs
+layout: ./app/mainLayout.ejs
 engine: ejs
 current: index
 ---
 
-<div class="container mt-10 my-8">
-    <div class="row">
-        <h2 class="subTitle">最新公告</h2>
-        <div class="col-md-5">
-            <div class="swiper-container mySwiper banner-Slide">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+<div class="section" id="section0">
+    <div class="d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between">
+            <h1 class="logo"><a href="index.html">團體共用基金系統</a></h1>
+            <h2><a href="#">登入</a><span class="mx-6">|</span><a href="#" >註冊</a></h2>
         </div>
 
-        <div class="col-md-7">
-            <div class="banner-News">
-                <h3 class="text-info">新聞標題</h2>
-                <ul class="text-dar">
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
+        <div class="section-content-1 align-self-center align-self-md-start">
+            <p>團體共享金融<br>資訊科技 x 金融商品<br>公平與成長</p>
+            <div class="d-md-none d-block">
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
+        </div>
+
+        <div class="section-bottom-1 align-self-center">
+            <h4><a href="#original"><i class="fas fa-chevron-down"></i></a></h4>
         </div>
     </div>
 
-    <div class="row">
-        <h2 class="subTitle">測試文字</h2>
-        <div class="col">
-            <div class="section-Test border-0">
-                <ul class="text-dar">
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
+  </div>
+
+  <div class="section" id="section1">
+      <div class="section-content-2">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+            <img src="./assets/images/Original.png">
+            <div>
+                <h2 class="text-center text-black fw-bold">緣起</h2>
+                <p class="p-10 pt-4 text-black">我們設計此平台，來滿足大眾的需求<br>平台上即可一站式與銀行端與信託端<br>進行小額財產的共同管理<br>來達成普惠金融<br>促進社會公平與成長</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="section" id="section2">
+    <h2 class="index-subTitle"><span>平台概念</span></h2>
+    <div class="d-flex">
+        <div class="section-content-3">
+            <div class="section-content-3-card">
+                <img src="./assets/images/concept1.png">
+                <h3>資訊科技 x 金融商品</h3>
+                <p class="d-md-block d-none">銀行端保管資金  信託端管理契約<br>嫁接一個平台<br>銀行端入口  信託端完成<br>讓使用者不需要透過銀行與信託<br>直接透過平台處理</p>
+            </div>
+
+            <div class="section-content-3-card">
+                <img src="./assets/images/concept2.png">
+                <h3>產品特色</h3>
+                <p class="d-md-block d-none">提供共同管理與規劃<br>未來需使用特定資金使用人<br>以共同進行儲蓄與保管<br>資金將由銀行端作為第三保管人<br>並由信託端作為合約保障
+                </p>
+            </div>
+
+            <div class="section-content-3-card">
+                <img src="./assets/images/concept3.png">
+                <h3>市場新創</h3>
+                <p class="d-md-block d-none">市面上的金融商品<br>大多是只限個人管理的商品<br>
+                    目前沒有共同管理資金的平台<br>我們因此設計此平台 來滿足大眾的需求<br>來達成普惠金融 促進社會公平與成長</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  <div class="section" id="section3">
+    <h2 class="index-subTitle"><span>看看他們怎麼說</span></h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="owl-carousel section-content-4">
+                    <div class="slide-content">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus delectus voluptatibus impedit corporis numquam similique! Aliquam tenetur accusantium odio nemo?</h4>
+                    </div>
+
+                    <div class="slide-content">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus delectus voluptatibus impedit corporis numquam similique! Aliquam tenetur accusantium odio nemo?</h4>
+                    </div>
+
+                    <div class="slide-content">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus delectus voluptatibus impedit corporis numquam similique! Aliquam tenetur accusantium odio nemo?</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="section " id="section4">
+
+    <h2 class="index-subTitle"><span>簡單四步開始規劃</span></h2>
+
+    <img src="./assets/images/starter.png">
+
+  </div>

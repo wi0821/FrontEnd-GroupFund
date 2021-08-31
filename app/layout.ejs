@@ -10,7 +10,6 @@
     <meta name="Description" content="手指輕觸，即刻完成您的第一筆理財計畫，1+1的力量等於無窮大，快找人一起實現目標吧！">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/style/all.css">
   	<link rel="icon" href="./assets/images/web-logo.ico" type="image/x-icon">
   </head>
@@ -20,7 +19,7 @@
     <header class="header">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center py-5 px-8 header-FirstRow">
-          <h1 class="header-logo"><a href="index.html">團體共用基金系統</a></h1>
+          <h1 class="logo"><a href="index.html">團體共用基金系統</a></h1>
           <div class="header-Login d-flex align-items-center">
             <a class="me-1 btn btn-danger px-4 py-2" data-bs-toggle="modal" data-bs-target="#loginModal">會員登入</a>
             <span>
@@ -38,16 +37,16 @@
           <div class="collapse navbar-collapse" id="header-List">
             <ul class="navbar-nav header-List">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">成功案例</a>
+                <a class="nav-link" aria-current="page" href="#">新增基金</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">流程教學</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">常見問題</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">關於我們</a>
               </li>
             </ul>
           </div>
@@ -106,33 +105,46 @@
     </div>
     <!-- 登入頁面 Modal-->
 
-    <footer class="footer px-8">
+    <footer class="footer">
       <div class="container">
-        <div class="row mb-10">
-          <ul class="footer-Link-Menu col-md-9">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="#">成功案例</a></li>
-            <li><a href="#">流程教學</a></li>
-            <li><a href="#">常見問題</a></li>
-            <li><a href="#">關於我們</a></li>
-          </ul>
 
-          <ul class="footer-Link-Social col-md-3">
-            <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-            <li><a href="#"><i class="fab fa-line fa-2x"></i></a></li>
-          </ul>
+        <div class="d-flex align-items-center mb-4 mb-md-10">
+          <div class="footer-logo"></div>
+          <div class="footer-border"></div>
         </div>
 
-        <div class="row footer-Copyright">
-          <p class="col-md-12">Copyright © 2021 團體共享金融系統 All rights reserved.</p>
-          <ul class="col-md-12">
-            <li><a href="#">隱私權政策</a></li>
-            <li><a href="#">服務條款</a></li>
-          </ul>
+        <div class="row mb-4 mb-md-10">
+          <div class="col-md-4">
+            <h4 class="mb-2 mb-md-4">GroupFund  一同為未來計畫</h4>
+            <a href="mailto:service@example.com">service@example.com</a>
+          </div>
+          <div class="col-md-2">
+              <ul class="footer-nav-List">
+                <li class="mb-2"><a href="">關於我們</a></li>
+                <li class="mb-2"><a href="">常見問題</a></li>
+                <li class="mb-2"><a href="">最新消息</a></li>
+                <li><a href="">成功案例</a></li>
+              </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h5 class="fs-4 mb-4"><a href="">全部計畫</a></h5>
+            <ul class="footer-nav-List">
+              <li class="mb-2"><a href="">查看計畫</a></li>
+              <li><a href="">新增計畫</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-between align-items-center footer-bottom">
+            <p class="mb-0">© 2021-2021 GroupFund .</p>
+            <p><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
+            <button type="button" class="btn btn-primary border rounded-pill">幫助</button>
+          </div>
         </div>
       </div>
     </footer>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-02QPKR3FNB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -143,32 +155,7 @@
     </script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-     AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 160, // 動畫觸發位置(px)[底部距離動畫元素的位置，不要太高]
-  delay: 0, // 動畫延遲
-  duration: 400, // 動畫執行時間(ms)
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-});
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
