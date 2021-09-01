@@ -5,6 +5,23 @@
     color: #000;
 }
 
+.title {
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    @include sectionMargin(40px,30px);
+    span {
+        padding-bottom: 8px;
+        border-bottom: 7px solid #92BE9E;
+    }
+
+    @include md () {
+        @include sectionMargin(56px,60px);
+        font-size: 40px;
+    }
+}
+
 .index-subTitle {
     color: #000;
     font-weight: 700;
@@ -19,6 +36,5 @@
     @include md () {
         margin-bottom: 60px;
         font-size: 32px;
-        font-size: 48px;
     }
 }

@@ -1,3 +1,4 @@
+ //進場動畫全域設定
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -21,32 +22,84 @@ AOS.init({
 
 });
 
-// var swiper = new Swiper(".mySwiper", {
-//     autoplay:true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       dynamicBullets: true,
-//     },
-//     breakpoints: {
-//         768:{
-//             autoplay:true
-//         },
-//       }
-//   });
+ //台灣縣市地區選擇器
+ //文檔：https://github.com/essoduke/jQuery-TWzipcode
+const twzipcode = $('#twzipcode').twzipcode();
+// const twzipcode = new TWzipcode();
 
-// var curPage = $(document).attr('title');
+// let get = twzipcode.get('country').value;
+// console.log(get);
+
+//日期選擇器
+const elem = document.querySelector('input[name="registerBirthDay"]');
+const datepicker = new Datepicker(elem, {
+  autohide: true,
+  nextArrow: '>',
+  prevArrow: '<',
+  format:'yyyy/mm/dd',
+  buttonClass: 'btn',
+  weekStart:1,
+  clearBtn:true,
+});
 
 
-// $(document).ready(function() {
-//   $( ".header-List" ).click(function() {
-//     if (curPage ==)
+//自訂程式碼
+const registerTitle = document.querySelector('.registerTitle');
+const registerCounty = document.querySelector('#registerCounty'); //通訊地址縣市選擇器
+const registerDistrict = document.querySelector('#registerDistrict'); //通訊地址區域選擇器
+const registerZipcode = document.querySelector('#registerZipcode'); //通訊地址郵遞區號
+const registerAddress = document.querySelector('#registerAddress'); //通訊地址欄位
 
-//     this.toggleClass("disabled");
-//   });
-// });
 
-// $(function(){
-//   $( "#buy" ).click(function() {
-//     $("#bbb").toggleClass("d-none");
-//   });
-// });
+const validRegisterInput = () => {
+  const registerAccount = document.querySelector("#registerAccount").value;
+  const registerPwd = document.querySelector("#registerPwd").value;
+  const registerConfirmPwd = document.querySelector("#registerConfirmPwd").value;
+
+  if (registerAccount.length < 6 || registerAccount.length > 30) {
+    $('#registerAccountError').removeClass('d-none');
+  } else if (registerPwd.length < 8) {
+    $('#registerAccountError').addClass('d-none');
+    $('#registerPwdError').removeClass('d-none');
+  } else if (registerPwd !== registerConfirmPwd) {
+    $('#registerPwdError').addClass('d-none');
+    $('#registerConfirmPwdError').removeClass('d-none');
+  } else {
+    $('#registerConfirmPwdError').addClass('d-none');
+    $('#registerAccountError').addClass('d-none');
+    $('#registerPwdError').addClass('d-none');
+
+    $('.register--form__basic').removeClass('d-none');
+    $('.register--form__init').addClass('d-none');
+
+    $('#btnRegisterNext').addClass('d-none');
+    $('.btnRegisterGroup').removeClass('d-none');
+    $('.btnRegisterGroup').addClass('d-flex');
+    registerTitle.textContent = "填寫基本資料";
+  }
+
+}
+
+
+
+$(document).ready( () => {
+  $('#btnRegisterNext').click( e => {
+    validRegisterInput();
+
+  });
+
+  $('#btnRegisterPrevious').click(() => {
+
+    $('.register--form__basic').addClass('d-none');
+    $('.register--form__init').removeClass('d-none');
+
+    $('#btnRegisterNext').removeClass('d-none');
+
+    $('.btnRegisterGroup').addClass('d-none');
+    $('.btnRegisterGroup').removeClass('d-flex');
+
+    registerTitle.textContent = "填寫註冊資料";
+
+  });
+
+});

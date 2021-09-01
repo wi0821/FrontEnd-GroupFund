@@ -1,0 +1,70 @@
+---
+title: 個人基本資料
+layout: ./app/layout.ejs
+engine: ejs
+current: user_profile
+---
+
+<h2 class="title"><span>個人基本資料</span></h2>
+<div class="userProfile container">
+  <div class="userProfile--form">
+    <div class="mb-md-10 mb-5 row">
+      <label for="userAccount" class="col-md-4 col-form-label">使用者帳號：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userAccount" name="userAccount" value="Test0001" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="userName" class="col-md-4 col-form-label">姓　　　名：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userName" name="userName" value="王大明" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="registerEmail" class="col-md-4 col-form-label">電 子 信 箱 ：</label>
+      <div class="col-md-8">
+        <input type="email" class="form-control-plaintext" id="registerEmail" name="registerEmail" value="Test0001@ntub.edu.tw" readonly>
+      </div>
+    </div>
+
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="userIdNumber" class="col-md-4 col-form-label">身分證字號：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userIdNumber" name="userIdNumber" value="A123456789" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for=userAddress" class="col-md-4 col-form-label">通 訊 地 址：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userAddress" name="userAddress" value="100台北市中正區濟南路一段321號" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="userBirthDay" class="col-md-4 col-form-label">生　　　日：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userBirthDay" name="userBirthDay" value="1990/01/01" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="userPhone" class="col-md-4 col-form-label">行 動 電 話：</label>
+      <div class="col-md-8">
+        <input type="tel" class="form-control-plaintext" id="userPhone" name="userPhone" value="0912345678" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="btnManageAccount" class="col-md-4 col-form-label">金 融 帳 戶：</label>
+      <div class="col-md-8">
+        <a href="user_account_manage.html" class="btn btn-info fw-bold fs-5 py-2 px-8">管理帳戶</a>
+      </div>
+    </div>
+
+    <button type="button" id="btnRegisterNext" class="btn btn-danger w-100 mb-5 px-5 py-2">修改</button>
+  </div>
+</div>

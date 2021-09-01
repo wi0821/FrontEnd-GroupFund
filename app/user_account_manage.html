@@ -1,0 +1,50 @@
+---
+title: 帳戶管理
+layout: ./app/layout.ejs
+engine: ejs
+current: user_account_manage.html
+---
+
+<h2 class="title"><span>帳戶管理</span></h2>
+<div class="userProfile container">
+  <div class="d-flex justify-content-end pt-5 pe-4">
+    <button type="button" id="btnRegisterNext" class="btn btn-success mb-5 px-5 py-2">新增金融帳戶</button>
+  </div>
+    <ul class="userProfile--BankList">
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn animate__faster">
+          <div class="card-body p-6">
+            <h5 class="card-title">中國信託</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****18234</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn">
+          <div class="card-body p-6">
+            <h5 class="card-title">國泰世華</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****45974</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn animate__slow">
+          <div class="card-body p-6">
+            <h5 class="card-title">臺灣銀行</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****37481</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+</div>

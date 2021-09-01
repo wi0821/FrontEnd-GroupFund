@@ -1,0 +1,109 @@
+---
+title: 填寫註冊資料
+layout: ./app/layout.ejs
+engine: ejs
+current: register_starter
+---
+
+<h2 class="title"><span class="registerTitle">填寫註冊資料</span></h2>
+<div class="register container">
+  <form class="register--form" method="post" action="">
+    <div class="register--form__init">
+      <div class="mb-md-15 mb-5 row">
+        <label for="registerAccount" class="col-md-4 col-form-label">帳　　號：</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="registerAccount" name="registerAccount" minlength="6" maxlength="30" placeholder="請輸入 6 - 30 位英數混合帳號" required>
+          <div id="registerAccountError" class="form-text d-none text-danger fs-5 fw-bold">帳號長度必需為6-30位數</div>
+        </div>
+      </div>
+
+      <div class="mb-md-15 mb-5 row">
+        <label for="registerPwd" class="col-md-4 col-form-label">密　　碼：</label>
+        <div class="col-md-8">
+          <input type="password" class="form-control" id="registerPwd" minlength="8" placeholder="請輸入 8 位英數混合密碼" required>
+          <div id="registerPwdError" class="form-text d-none text-danger fs-5 fw-bold">密碼長度必需為8位數以上</div>
+        </div>
+      </div>
+
+      <div class="mb-md-15 mb-5 row">
+        <label for="registerConfirmPwd" class="col-md-4 col-form-label">確認密碼：</label>
+        <div class="col-md-8">
+          <input type="password" class="form-control" id="registerConfirmPwd" name="registerConfirmPwd" placeholder="請確認上述密碼" required>
+          <div id="registerConfirmPwdError" class="form-text d-none text-danger fs-5 fw-bold">必須與原密碼相符</div>
+        </div>
+      </div>
+
+      <div class="mb-md-15 mb-5 row">
+        <label for="registerIDName" class="col-md-4 col-form-label">暱　　稱：</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="registerIDName" name="registerIDName" placeholder="請輸入使用者名稱" required>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="register--form__basic d-none">
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerEmail" class="col-md-4 col-form-label">電子信箱：</label>
+        <div class="col-md-8">
+          <input type="email" class="form-control" id="registerEmail" name="registerEmail" placeholder="請輸入您的電子信箱" required>
+        </div>
+      </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerName" class="col-md-4 col-form-label">姓　　名：</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="registerName" name="registerName" placeholder="請填寫真實姓名" required>
+        </div>
+      </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerIdNumber" class="col-md-4 col-form-label">身分證號：</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="registerIdNumber" name="registerIdNumber" placeholder="A123456789" minlength="10" maxlength="10" required>
+        </div>
+      </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerAddress" class="col-md-4 col-form-label">通訊地址：</label>
+        <div class="col-md-8">
+
+          <div id="twzipcode">
+            <div class="d-flex justify-content-between mb-2">
+              <div data-role="zipcode" data-style="form-control fs-6" data-value="100" aria-readonly="true"></div>
+
+              <div class="w-100" data-role="county" data-style="form-select" data-value="臺北市"></div>
+
+              <div class="w-100" data-role="district" data-style="form-select" data-value="中正區"></div>
+            </div>
+          </div>
+
+          <input type="text" class="form-control" id="registerAddress" name="registerAddress" placeholder="XX路XX巷XX號XX樓" required>
+        </div>
+      </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerBirthDay" class="col-md-4 col-form-label">生　　日：</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="registerBirthDay" placeholder="請選擇您的生日" name="registerBirthDay" required>
+        </div>
+      </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <label for="registerPhone" class="col-md-4 col-form-label">行動電話：</label>
+        <div class="col-md-8">
+          <input type="tel" class="form-control" id="registerPhone" name="registerPhone" placeholder="0912345678" minlength="10" maxlength="10" required>
+        </div>
+      </div>
+    </div>
+
+      <div class="d-md-flex d-block">
+        <button type="button" id="btnRegisterNext" class="btn btn-success w-100 mb-5 px-5 py-2">下一步</button>
+        <div class="btnRegisterGroup d-none justify-content-center flex-grow-1">
+          <button type="button" id="btnRegisterPrevious" class="btn btn-outline-danger w-50 mb-5 me-4 px-5 py-2">上一步</button>
+          <!-- <button type="submit" id="btnRegisterSend" class="btn btn-success w-50 mb-5 ms-4 px-5 py-2">註冊</button> -->
+          <a href="register_verify.html" class="btn btn-success w-50 fs-4 mb-5 ms-4 px-5 py-2">註冊</a>
+        </div>
+      </div>
+  </form>
+</div>

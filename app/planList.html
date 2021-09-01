@@ -1,0 +1,31 @@
+---
+title: 我的計畫
+layout: ./app/layout.ejs
+engine: ejs
+current: user_account_manage.html
+---
+
+<h2 class="title"><span>我的計畫</span></h2>
+
+<div class="d-flex flex-md-row flex-column justify-content-center container">
+  <div class="card border-0 me-md-5 mb-5">
+    <a class="btn btn-outline-danger card-body py-8">
+      <h4 class="card-title">已完成計畫</h4>
+      <p class="card-text">可以查看，過去期間完成的全部計畫及計畫相關資訊。</p>
+    </a>
+  </div>
+
+  <div class="card border-0 me-md-5 mb-5">
+    <a href="#" class="btn btn-outline-primary card-body py-8">
+      <h4 class="card-title">進行中計畫</h4>
+      <p class="card-text">可以查看，當前正常進行中的計畫及計畫相關資訊。</p>
+    </a>
+  </div>
+
+  <div class="card border-0 mb-5">
+    <a class="btn btn-outline-success card-body py-8">
+      <h4 class="card-title">待啟動計畫</h4>
+      <p class="card-text">可以查看，未來即將啟動的計畫及計畫相關資訊。</p>
+    </a>
+  </div>
+</div>
