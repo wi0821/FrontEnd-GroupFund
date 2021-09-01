@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>團體共用基金系統</title>
+    <title>請驗證電子信箱</title>
     <meta name="Keywords" content="團體共用基金系統,團體共用,基金系統,團體基金,共用基金,買房基金,頭期款,夫妻存錢,共同目標,投資理財">
     <meta name="Description" content="手指輕觸，即刻完成您的第一筆理財計畫，1+1的力量等於無窮大，快找人一起實現目標吧！">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
@@ -57,54 +57,30 @@
     </header>
 
     
-<div class="container my-8">
-    <div class="row">
-        <h2 class="subTitle">最新公告</h2>
-        <div class="col-md-5">
-            <div class="swiper-container mySwiper banner-Slide">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-        </div>
-
-        <div class="col-md-7">
-            <div class="banner-News">
-                <h3 class="text-info">新聞標題</h2>
-                <ul class="text-dar">
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
-            </div>
-        </div>
+<h2 class="title"><span>驗證電子信箱</span></h2>
+<div class="register container">
+  <form class="register--form" method="" action="">
+    <div class="mb-md-20 mb-10 row">
+      <label for="registerEmail" class="col-md-4 col-form-label">電子信箱：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="registerEmail" readonly name="registerEmail" value="n1066456@ntub.edu.tw">
+      </div>
     </div>
 
-    <div class="row">
-        <h2 class="subTitle">測試文字</h2>
-        <div class="col">
-            <div class="section-Test border-0">
-                <ul class="text-dar">
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="mb-md-20 mb-10 row text-black">
+      <p class="mb-4">請至信箱<span class="text-danger">點選確認信</span>，當認證完信箱後，便能進行下一步註冊</p>
+      <p>若信箱填寫錯誤，可點選回上一步，進行修改</p>
     </div>
+
+    <div class="d-md-flex d-block">
+      <a href="javascript:history.back()" class="btn btn-outline-danger fs-4 w-50 mb-5 me-4 px-5 py-2">上一步</a>
+      <a href="user_profile.html" class="btn btn-success fs-4 w-50 mb-5 ms-4 px-5 py-2">確認註冊</a>
+      <!-- <button type="button" class="btn btn-outline-danger w-50 mb-5 me-4 px-5 py-2">上一步</button>
+      <button type="button" class="btn btn-success w-50 mb-5 ms-4 px-5 py-2">註冊</button> -->
+    </div>
+    </form>
 </div>
+
 
     <!-- 登入頁面 Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">

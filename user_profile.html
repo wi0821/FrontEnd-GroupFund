@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>會員註冊</title>
+    <title>個人基本資料</title>
     <meta name="Keywords" content="團體共用基金系統,團體共用,基金系統,團體基金,共用基金,買房基金,頭期款,夫妻存錢,共同目標,投資理財">
     <meta name="Description" content="手指輕觸，即刻完成您的第一筆理財計畫，1+1的力量等於無窮大，快找人一起實現目標吧！">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   	<link rel="icon" href="./assets/images/web-logo.ico" type="image/x-icon">
   </head>
@@ -55,63 +57,68 @@
     </header>
 
     
-<div class="container">
-    <div class="subTitle">會員註冊</div>
-    <form method="POST" action="">
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">帳　　號</span>
-            <input type="text" class="form-control" placeholder="請輸入帳號" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請輸入帳號">
-          </div>
-          <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">
-              Must be 6-30 characters long.
-            </span>
-          </div>
-        </div>
+<h2 class="title"><span>個人基本資料</span></h2>
+<div class="userProfile container">
+  <div class="userProfile--form">
+    <div class="mb-md-10 mb-5 row">
+      <label for="userAccount" class="col-md-4 col-form-label">使用者帳號：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userAccount" name="userAccount" value="Test0001" readonly>
+      </div>
+    </div>
 
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">密　　碼</span>
-            <input type="password" class="form-control" placeholder="請輸入密碼" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請輸入密碼">
-          </div>
-          <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">
-              Must be 8 characters long.
-            </span>
-          </div>
-        </div>
+    <div class="mb-md-10 mb-5 row">
+      <label for="userName" class="col-md-4 col-form-label">姓　　　名：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userName" name="userName" value="王大明" readonly>
+      </div>
+    </div>
 
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">確認密碼</span>
-            <input type="password" class="form-control" placeholder="請再次輸入密碼" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請再次輸入密碼">
-          </div>
-        </div>
+    <div class="mb-md-10 mb-5 row">
+      <label for="registerEmail" class="col-md-4 col-form-label">電 子 信 箱 ：</label>
+      <div class="col-md-8">
+        <input type="email" class="form-control-plaintext" id="registerEmail" name="registerEmail" value="Test0001@ntub.edu.tw" readonly>
+      </div>
+    </div>
 
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">名　　稱</span>
-            <input type="text" class="form-control" placeholder="請輸入您的使用者名稱" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請輸入您的使用者名稱">
-          </div>
-        </div>
 
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">電子信箱</span>
-            <input type="email" class="form-control" placeholder="請輸入您的Email信箱" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請輸入您的Email信箱">
-          </div>
-        </div>
+    <div class="mb-md-10 mb-5 row">
+      <label for="userIdNumber" class="col-md-4 col-form-label">身分證字號：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userIdNumber" name="userIdNumber" value="A123456789" readonly>
+      </div>
+    </div>
 
-        <div class="row mb-3">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">電　　話</span>
-            <input type="tel" class="form-control" placeholder="請輸入您的電話" aria-label="Username" aria-describedby="addon-wrapping" aria-placeholder="請輸入您的電話">
-          </div>
-        </div>
+    <div class="mb-md-10 mb-5 row">
+      <label for=userAddress" class="col-md-4 col-form-label">通 訊 地 址：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userAddress" name="userAddress" value="100台北市中正區濟南路一段321號" readonly>
+      </div>
+    </div>
 
-        <button type="submit" class="btn btn-success col- mb-5 px-5 py-2">確定註冊</button>
-      </form>
+    <div class="mb-md-10 mb-5 row">
+      <label for="userBirthDay" class="col-md-4 col-form-label">生　　　日：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="userBirthDay" name="userBirthDay" value="1990/01/01" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="userPhone" class="col-md-4 col-form-label">行 動 電 話：</label>
+      <div class="col-md-8">
+        <input type="tel" class="form-control-plaintext" id="userPhone" name="userPhone" value="0912345678" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-10 mb-5 row">
+      <label for="btnManageAccount" class="col-md-4 col-form-label">金 融 帳 戶：</label>
+      <div class="col-md-8">
+        <a href="user_account_manage.html" class="btn btn-info fw-bold fs-5 py-2 px-8">管理帳戶</a>
+      </div>
+    </div>
+
+    <button type="button" id="btnRegisterNext" class="btn btn-danger w-100 mb-5 px-5 py-2">修改</button>
+  </div>
 </div>
 
 
@@ -152,7 +159,7 @@
               </div>
               <div class="d-flex justify-content-end mx-2 me-3">
                 <!-- <button type="button" class="btn btn-warning px-5 py-2 me-2" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</button> -->
-                <a type="button" class="btn btn-warning px-5 py-2 me-2" href="register.html">註冊</a>
+                <a type="button" class="btn btn-warning px-5 py-2 me-2" href="register_starter.html">註冊</a>
                 <button type="submit" class="btn btn-success px-5 py-2">登入</button>
               </div>
             </form>
@@ -187,7 +194,7 @@
           </div>
 
           <div class="col-md-3">
-            <h5 class="fs-4 mb-4"><a href="">全部計畫</a></h5>
+            <h5 class="fs-4 mb-4"><a href="planList.html">全部計畫</a></h5>
             <ul class="footer-nav-List">
               <li class="mb-2"><a href="">查看計畫</a></li>
               <li><a href="">新增計畫</a></li>
@@ -196,9 +203,10 @@
         </div>
         <div class="row">
           <div class="d-flex justify-content-between align-items-center footer-bottom">
-            <p class="mb-0">© 2021-2021 GroupFund .</p>
-            <p><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
-            <button type="button" class="btn btn-primary border rounded-pill">幫助</button>
+            <p class="mb-0">©2021 GroupFund.</p>
+            <p class="d-none d-md-block"><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
+            <p class="d-block d-md-none"><a href="">使用者條款</a><br><a href="">隱私權政策</a></p>
+            <button type="button" class="btn btn-helper text-white border rounded-pill">幫 助</button>
           </div>
         </div>
       </div>
@@ -212,10 +220,14 @@
 
       gtag('config', 'G-02QPKR3FNB');
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/Javascript/tw-city-selector.min.js"></script>
+    <script src="./assets/Javascript/jquery.twzipcode.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script> -->
     <script src="./assets/js/all.js"></script>
   </body>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>團體共用基金系統</title>
+    <title>帳戶管理</title>
     <meta name="Keywords" content="團體共用基金系統,團體共用,基金系統,團體基金,共用基金,買房基金,頭期款,夫妻存錢,共同目標,投資理財">
     <meta name="Description" content="手指輕觸，即刻完成您的第一筆理財計畫，1+1的力量等於無窮大，快找人一起實現目標吧！">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
@@ -57,54 +57,50 @@
     </header>
 
     
-<div class="container my-8">
-    <div class="row">
-        <h2 class="subTitle">最新公告</h2>
-        <div class="col-md-5">
-            <div class="swiper-container mySwiper banner-Slide">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                  <div class="swiper-slide"><img src="https://fakeimg.pl/525x320/"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-        </div>
-
-        <div class="col-md-7">
-            <div class="banner-News">
-                <h3 class="text-info">新聞標題</h2>
-                <ul class="text-dar">
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
+<h2 class="title"><span>帳戶管理</span></h2>
+<div class="userProfile container">
+  <div class="d-flex justify-content-end pt-5 pe-4">
+    <button type="button" id="btnRegisterNext" class="btn btn-success mb-5 px-5 py-2">新增金融帳戶</button>
+  </div>
+    <ul class="userProfile--BankList">
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn animate__faster">
+          <div class="card-body p-6">
+            <h5 class="card-title">中國信託</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****18234</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
             </div>
+          </div>
         </div>
-    </div>
+      </li>
 
-    <div class="row">
-        <h2 class="subTitle">測試文字</h2>
-        <div class="col">
-            <div class="section-Test border-0">
-                <ul class="text-dar">
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                    <li data-aos="fade-right"><a href="#">Lorem ipsum, dolor sit amet consectetur.Lorem ipsum</a></li>
-                </ul>
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn">
+          <div class="card-body p-6">
+            <h5 class="card-title">國泰世華</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****45974</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
             </div>
+          </div>
         </div>
-    </div>
+      </li>
+
+      <li class="mb-4">
+        <div class="card animate__animated animate__rollIn animate__slow">
+          <div class="card-body p-6">
+            <h5 class="card-title">臺灣銀行</h5>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">*****37481</p>
+              <a href="#" class="btn btn-outline-danger">刪除</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
 </div>
+
 
     <!-- 登入頁面 Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
