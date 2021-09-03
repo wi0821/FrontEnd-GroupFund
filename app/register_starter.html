@@ -7,7 +7,7 @@ current: register_starter
 
 <h2 class="title"><span class="registerTitle">填寫註冊資料</span></h2>
 <div class="register container">
-  <form class="register--form" method="post" action="">
+  <form class="form_setting register--form" method="post" action="">
     <div class="register--form__init">
       <div class="mb-md-15 mb-5 row">
         <label for="registerAccount" class="col-md-4 col-form-label">帳　　號：</label>
@@ -107,3 +107,19 @@ current: register_starter
       </div>
   </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+
+<script>
+  const birthDateInput = document.querySelector('input[name="registerBirthDay"]');
+
+  const birthDatePicker = new Datepicker(birthDateInput, {
+  autohide: true,
+  nextArrow: '>',
+  prevArrow: '<',
+  format:'yyyy/mm/dd',
+  buttonClass: 'btn',
+  weekStart:1,
+  clearBtn:true,
+});
+</script>

@@ -1,32 +1,5 @@
 .register {
     &--form {
-        padding: 50px 10%;
         background: #FAEFEF;
-
-        label,input {
-            color: #000;
-            font-size: 16px;
-        }
-
-        button {
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        @include md() {
-            padding: 130px 25%;
-            label,input {
-                font-size: 22px;
-            }
-            button {
-                font-size: 24px;
-            }
-            p {
-                font-size: 20px;
-            }
-        }
     }
 }

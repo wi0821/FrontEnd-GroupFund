@@ -23,3 +23,15 @@ a,input,button {
 *,*::before,*::after{
     box-sizing: border-box;
   }
+
+//hiding arrows/spinners
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox hiding arrows/spinners*/
+input[type=number] {
+  -moz-appearance: textfield;
+}

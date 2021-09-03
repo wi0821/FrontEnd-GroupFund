@@ -13,10 +13,13 @@
 @import "./layout/header";
 @import "./layout/footer";
 
+@import "./components/logo";
 @import "./components/subtitle";
 @import "./components/datePicker";
-@import "./components/logo";
+@import "./components/progressbar";
+@import "./components/form_container";
 
 @import "./pages/index";
 @import "./pages/register";
 @import "./pages/user_profile";
+@import "./pages/planAdd";
