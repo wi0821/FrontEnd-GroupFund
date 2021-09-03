@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="header-List">
             <ul class="navbar-nav header-List">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">新增基金</a>
+                <a class="nav-link" aria-current="page" href="planAdd.html">新增計畫</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">關於我們</a>
@@ -59,28 +59,28 @@
     
 <h2 class="title"><span>我的計畫</span></h2>
 
-<div class="d-flex flex-md-row flex-column justify-content-center container">
-  <div class="card border-0 me-md-5 mb-5">
+<ul class="d-flex flex-md-row flex-column justify-content-center container">
+  <li class="card border-0 me-md-5 mb-5">
     <a class="btn btn-outline-danger card-body py-8">
       <h4 class="card-title">已完成計畫</h4>
       <p class="card-text">可以查看，過去期間完成的全部計畫及計畫相關資訊。</p>
     </a>
-  </div>
+  </li>
 
-  <div class="card border-0 me-md-5 mb-5">
+  <li class="card border-0 me-md-5 mb-5">
     <a href="#" class="btn btn-outline-primary card-body py-8">
       <h4 class="card-title">進行中計畫</h4>
       <p class="card-text">可以查看，當前正常進行中的計畫及計畫相關資訊。</p>
     </a>
-  </div>
+  </li>
 
-  <div class="card border-0 mb-5">
+  <li class="card border-0 mb-5">
     <a class="btn btn-outline-success card-body py-8">
       <h4 class="card-title">待啟動計畫</h4>
       <p class="card-text">可以查看，未來即將啟動的計畫及計畫相關資訊。</p>
     </a>
-  </div>
-</div>
+  </li>
+</ul>
 
     <!-- 登入頁面 Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -180,7 +180,6 @@
 
       gtag('config', 'G-02QPKR3FNB');
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

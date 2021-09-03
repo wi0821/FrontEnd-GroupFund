@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="header-List">
             <ul class="navbar-nav header-List">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">新增基金</a>
+                <a class="nav-link" aria-current="page" href="planAdd.html">新增計畫</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">關於我們</a>
@@ -59,7 +59,7 @@
     
 <h2 class="title"><span class="registerTitle">填寫註冊資料</span></h2>
 <div class="register container">
-  <form class="register--form" method="post" action="">
+  <form class="form_setting register--form" method="post" action="">
     <div class="register--form__init">
       <div class="mb-md-15 mb-5 row">
         <label for="registerAccount" class="col-md-4 col-form-label">帳　　號：</label>
@@ -160,6 +160,22 @@
   </form>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+
+<script>
+  const birthDateInput = document.querySelector('input[name="registerBirthDay"]');
+
+  const birthDatePicker = new Datepicker(birthDateInput, {
+  autohide: true,
+  nextArrow: '>',
+  prevArrow: '<',
+  format:'yyyy/mm/dd',
+  buttonClass: 'btn',
+  weekStart:1,
+  clearBtn:true,
+});
+</script>
+
 
     <!-- 登入頁面 Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -259,7 +275,6 @@
 
       gtag('config', 'G-02QPKR3FNB');
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

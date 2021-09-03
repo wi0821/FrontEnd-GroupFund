@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新增計畫</title>
+    <meta name="Keywords" content="團體共用基金系統,團體共用,基金系統,團體基金,共用基金,買房基金,頭期款,夫妻存錢,共同目標,投資理財">
+    <meta name="Description" content="手指輕觸，即刻完成您的第一筆理財計畫，1+1的力量等於無窮大，快找人一起實現目標吧！">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  	<link rel="icon" href="./assets/images/web-logo.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-5 px-8 header-FirstRow">
+          <h1 class="logo"><a href="index.html">團體共用基金系統</a></h1>
+          <div class="header-Login d-flex align-items-center">
+            <a class="me-1 btn btn-danger px-4 py-2" data-bs-toggle="modal" data-bs-target="#loginModal">會員登入</a>
+            <span>
+              <button class="border-0 bg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="bi bi-person-circle fa-2x"></i>
+              </button>
+              <button class="navbar-toggler text-success" type="button" data-bs-toggle="collapse" data-bs-target="#header-List" aria-controls="header-List" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fa-lg"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md p-0">
+          <div class="collapse navbar-collapse" id="header-List">
+            <ul class="navbar-nav header-List">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="planAdd.html">新增計畫</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">流程教學</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">常見問題</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    
+<h2 class="title"><span>新增計畫</span></h2>
+
+
+<div class="planAdd container">
+  <form class="planAdd--form form_setting" method="post" action="">
+
+    <div class="planAdd--form__progressbar">
+      <ul class="progressbar">
+        <li class="active">建立計畫</li>
+        <li class="planAddStep2">連結帳戶及<br>選擇扣款日</li>
+        <li class="planAddStep3">邀請合夥人</li>
+        <li class="planAddStep4">建立成功</li>
+      </ul>
+    </div>
+                          <!-- 表單驗證 is-valid is-invalid  invalid-feedback-->
+    <div class="planAdd--form__step1 needs-validation" novalidate>
+      <div class="row">
+        <div class="col-12 mb-2">
+          <label for="planAddName" class="form-label fs-3">真實姓名</label>
+          <h3 id="planAddName"><span>王大明</span></h3>
+          <p>發起人必須要用真實姓名註冊會員，平台不接受匿名或他人名義<br>如發起人非個人，可由團隊代表人先以團隊名稱註冊團隊帳號，再透過團隊設定邀請團隊成員各自的平台會員帳號加入協作。</p>
+        </div>
+      </div>
+
+      <div class="col-12 mb-2">
+        <label for="planAddEmail" class="form-label fs-3">電子信箱</label>
+        <input type="email" name="planAddEmail" class="form-control-plaintext ps-2" id="planAddEmail" value="example@example.com" readonly>
+        <p>請確認你的信箱位址沒有錯誤，不然有問題時會聯絡不到你。如果有誤請到你的<a href="#" class="text-primary">會員頁面</a>修改。</p>
+      </div>
+            <!-- 表單驗證 is-valid is-invalid  invalid-feedback-->
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label for="planAddDateStart" class="form-label fs-3">預計開始日期</label>
+          <input type="text" class="is-invalid form-control" id="planAddDateStart" placeholder="預計開始日期" name="planAddDate" required>
+          <div class="invalid-feedback">
+            請選擇預計開始日期
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="planAddDateEnd" class="form-label fs-3">預計結束日期</label>
+          <input type="text" class="is-invalid form-control" id="planAddDateEnd" placeholder="預計結束日期" name="planAddDate" required>
+          <div  class="invalid-feedback">
+            請選擇預計結束日期
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 mb-2">
+        <label for="planAddTargetMoney" class="form-label fs-3">目標金額</label>
+        <div class="input-group has-validation">
+          <input type="number" name="planAddTargetMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddTargetMoney" min="100000" max="10000000" placeholder="1,000,000" required>
+          <div class="input-group-text fs-4">NTD$</div>
+          <div  class="invalid-feedback" id="planAddTargetMoneyFeedback">
+            請輸入目標金額
+          </div>
+        </div>
+        <p>請根據你計畫的需求，估算你所需要的金額。</p>
+      </div>
+
+      <div class="col-md-6 mb-2">
+        <label for="planAddCatalog" class="form-label fs-3">標的分類</label>
+        <select class="is-invalid form-select" name="planAddCatalog" id="planAddCatalog" required>
+          <option selected disabled value="">請選擇計畫分類</option>
+          <option value="旅遊">旅遊</option>
+          <option value="買房">買房</option>
+          <option value="買車">買車</option>
+          <option value="儲蓄">儲蓄</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇標的分類
+        </div>
+      </div>
+
+      <div class="col-12 mb-2">
+        <label for="planAddTargetName" class="form-label fs-3">計畫名稱</label>
+        <input type="text" name="planAddTargetName" class="is-invalid form-control" id="planAddTargetName"  placeholder="請給自己的計劃取個瘋狂的名子吧" required>
+        <div  class="invalid-feedback">
+          請輸入計畫名稱
+        </div>
+      </div>
+
+      <div class="col-6 col-xl-2 col-lg-4 mb-2">
+        <label for="planAddMembersCount" class="form-label fs-3">計畫參與人數</label>
+        <select class="is-invalid form-select" name="planAddMembersCount" id="planAddMembersCount" required>
+          <option selected disabled value="">選擇人數</option>
+          <option value="1">1人</option>
+          <option value="2">2人</option>
+          <option value="3">3人</option>
+          <option value="4">4人</option>
+          <option value="5">5人</option>
+          <option value="6">6人</option>
+          <option value="7">7人</option>
+          <option value="8">8人</option>
+          <option value="9">9人</option>
+          <option value="10">10人</option>
+          <option value="11">11人</option>
+          <option value="12">12人</option>
+          <option value="13">13人</option>
+          <option value="14">14人</option>
+          <option value="15">15人</option>
+          <option value="16">16人</option>
+          <option value="17">17人</option>
+          <option value="18">18人</option>
+          <option value="19">19人</option>
+          <option value="20">20人</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇計畫參與人數
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-5 col-12">
+          <input type="file" class="is-invalid form-control" id="planAddPicture" aria-label="planAddPic" required>
+          <div id="planAddPictureFeedback" class="invalid-feedback">請上傳圖片</div>
+        </div>
+        <p class="d-block d-md-none">請根據你計畫的需求，選擇一張適當的圖片</p>
+        <div class="col-6">
+          <p class="text-black fs-6">檔案大小:最大1MB<br>檔案限制: .JPEG, .PNG</p>
+        </div>
+        <p class="d-none d-md-block">請根據你計畫的需求，選擇一張適當的圖片</p>
+      </div>
+
+      <div class="col-12 col-md-4 col-xl-2">
+        <button type="button" id="btnplanAddstep1Next" class="btn btn-danger w-100 mb-5 px-5 py-2">下一步</button>
+      </div>
+    </div>
+
+    <div class="planAdd--form__step2 d-none needs-validation" novalidate>
+      <h2 class="text-center fw-bold">連結帳戶</h2>
+
+      <div class="col-lg-4 mb-5 mb-md-10">
+        <label for="planAddBankAccount" class="form-label fs-5">選擇扣款帳號</label>
+        <select class="is-invalid form-select" name="planAddBankAccount" id="planAddBankAccount" required>
+          <option selected disabled value="">金融帳號</option>
+          <option value="中國信託 *****18234">中國信託 *****18234</option>
+          <option value="國泰世華 *****45974">國泰世華 *****45974</option>
+          <option value="臺灣銀行 *****37481">臺灣銀行 *****37481</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇扣款帳號
+        </div>
+        <p>將每個月固定日期從連結帳戶中扣款</p>
+      </div>
+
+      <div class="col-6 col-xl-2 col-lg-4 mb-5 mb-md-10">
+        <label for="planAddBankDebitDate" class="form-label fs-5">選擇扣款日</label>
+        <select class="is-invalid form-select" name="planAddBankDebitDate" id="planAddBankDebitDate" required>
+          <option selected disabled value="">請選擇...</option>
+          <option value="1">1日</option>
+          <option value="2">2日</option>
+          <option value="3">3日</option>
+          <option value="4">4日</option>
+          <option value="5">5日</option>
+          <option value="6">6日</option>
+          <option value="7">7日</option>
+          <option value="8">8日</option>
+          <option value="9">9日</option>
+          <option value="10">10日</option>
+          <option value="11">11日</option>
+          <option value="12">12日</option>
+          <option value="13">13日</option>
+          <option value="14">14日</option>
+          <option value="15">15日</option>
+          <option value="16">16日</option>
+          <option value="17">17日</option>
+          <option value="18">18日</option>
+          <option value="19">19日</option>
+          <option value="20">20日</option>
+          <option value="21">21日</option>
+          <option value="22">22日</option>
+          <option value="23">23日</option>
+          <option value="24">24日</option>
+          <option value="25">25日</option>
+          <option value="26">26日</option>
+          <option value="27">27日</option>
+          <option value="28">28日</option>
+          <option value="29">29日</option>
+          <option value="30">30日</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇每月扣款日
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-5 mb-md-10">
+        <label for="planAddBankDebitMoney" class="form-label fs-3">輸入扣款金額</label>
+        <div class="input-group has-validation">
+          <div class="input-group-text fs-4">NTD$</div>
+          <input type="number" name="planAddBankDebitMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddBankDebitMoney"  placeholder="10,000" required>
+          <div class="invalid-feedback" id="planAddBankDebitMoneyFeedback">
+            輸入扣款金額
+          </div>
+        </div>
+        <p>將每個月固定日期從連結帳戶中扣款固定金額至指定帳戶</p>
+      </div>
+
+      <div class="d-md-flex d-block">
+        <button type="button" id="btnplanAddstep2Previous" class="btn btn-outline-warning text-black w-100 mb-5 me-4 px-5 py-2">上一步</button>
+        <button type="button" id="btnplanAddstep2Next" class="btn btn-danger w-100 mb-5 px-5 py-2">下一步</button>
+      </div>
+    </div>
+
+    <div class="planAdd--form__step3 d-none needs-validation" novalidate>
+      <h2 class="text-center fw-bold mb-11">邀請參與人</h2>
+      <p class="mb-4">將會寄電子信件至參與人信箱，確認後，即可加入計畫</p>
+      <ul class="p-0">
+        <li class="mb-6 border border-2">
+          <div class="row g-0">
+            <div class="col-md-2 d-md-flex d-block justify-content-center align-items-center">
+              <h3 class="card-title text-center d-none d-md-block">參<br>與<br>人<br>1</h3>
+              <h3 class="card-title text-center d-md-none d-block mt-5 mt-md-0">參與人1</h3>
+            </div>
+            <div class="col-md-10">
+              <div class="card-body p-5">
+                <div class="planAddInvite">
+
+                  <div class="row align-items-center mb-4">
+                    <div class="col-md-2">
+                      <label class="form-label" for="planAddInviteName1">姓　　名</label>
+                    </div>
+
+                    <div class="col-md-5">
+                      <input type="text"  class="planAddInviteName form-control" id="planAddInviteName1" name="planAddInviteName1" placeholder="參與人姓名">
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+                    <div class="col-md-2">
+                      <label class="form-label" for="planAddInviteEmail1">電子信箱</label>
+                    </div>
+
+                    <div class="col-md-5">
+                      <input type="email"  class="planAddInviteEmail1 form-control" id="planAddInviteEmail1" name="planAddInviteEmail1" placeholder="emample@example.com">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mb-6 border border-2">
+          <div class="row g-0">
+            <div class="col-md-2 d-md-flex d-block justify-content-center align-items-center">
+              <h3 class="card-title text-center d-none d-md-block">參<br>與<br>人<br>2</h3>
+              <h3 class="card-title text-center d-md-none d-block mt-5 mt-md-0">參與人2</h3>
+            </div>
+            <div class="col-md-10">
+              <div class="card-body p-5">
+                <div class="planAddInvite">
+
+                  <div class="row align-items-center mb-4">
+                    <div class="col-md-2">
+                      <label class="form-label" for="planAddInviteName2">姓　　名</label>
+                    </div>
+
+                    <div class="col-md-5">
+                      <input type="text"  class="planAddInviteName form-control" id="planAddInviteName2" name="planAddInviteName2" placeholder="參與人姓名">
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+                    <div class="col-md-2">
+                      <label class="form-label" for="planAddInviteEmail2">電子信箱</label>
+                    </div>
+
+                    <div class="col-md-5">
+                      <input type="email"  class="planAddInviteEmail1 form-control" id="planAddInviteEmail2" name="planAddInviteEmail2" placeholder="emample@example.com">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="d-flex justify-content-center mb-20">
+        <button type="button" id="btnInviteNew" class="btn"><i class="bi bi-plus-circle fa-2x"></i></button>
+      </div>
+
+      <div class="d-md-flex d-block">
+        <button type="button" id="btnplanAddstep3Previous" class="btn btn-outline-warning text-black w-100 mb-5 me-4 px-5 py-2">上一步</button>
+        <button type="button" id="btnplanAddstep3Next" class="btn btn-danger w-100 mb-5 px-5 py-2">下一步</button>
+      </div>
+    </div>
+
+    <div class="planAdd--form__step4 d-none needs-validation" novalidate>
+      <h2 class="text-center fw-bold mb-11">建立成功</h2>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneName" class="form-label fs-3">真實姓名</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneName" id="planAddDoneName" class="form-control-plaintext fs-4" value="王大明" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneEmail" class="form-label fs-3">電子信箱</label>
+        </div>
+        <div class="col-auto">
+          <input type="email" name="planAddDoneEmail" id="planAddDoneEmail" class="form-control-plaintext fs-4" value="example@example.com" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneCatalog" class="form-label fs-3">標　　的</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneCatalog" id="planAddDoneCatalog" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneTargetName" class="form-label fs-3">計畫名稱</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneTargetName" id="planAddDoneTargetName" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneTargetMoney" class="form-label fs-3">目標金額</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="planAddDoneTargetMoney" id="planAddDoneTargetMoney" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneDate" class="form-label fs-3">規劃時間</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneDate" id="planAddDoneDate" class="form-control-plaintext fs-4" value="2021/09/01 ~ 2025/09/01" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneBankAccount" class="form-label fs-3">扣款帳號</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneBankAccount" id="planAddDoneBankAccount" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneBankDebitDate" class="form-label fs-3">扣款日期</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneBankDebitDate" id="planAddDoneBankDebitDate" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneBankDebitMoney" class="form-label fs-3">扣款金額</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="planAddDoneBankDebitMoney" id="planAddDoneBankDebitMoney" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="planAddDoneInviteName" class="form-label fs-3">參與人員</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="planAddDoneInviteName" id="planAddDoneInviteName" class="form-control-plaintext fs-4" readonly>
+        </div>
+      </div>
+
+      <div class="d-md-flex d-block mt-10 mt-md-20">
+        <button type="button" id="btnplanAddstep4Previous" class="btn btn-outline-warning text-black w-100 mb-5 me-4 px-5 py-2">上一步</button>
+        <!-- <button type="Submit" id="btnplanAddSubmit" class="btn btn-danger w-100 mb-5 px-5 py-2">完成</button> -->
+        <a href="planList.html" id="btnplanAddSubmit" class="btn btn-success w-100 mb-5 fs-4 px-5 py-2">完成</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+
+<script>
+  const planAddInputStart = document.querySelector('#planAddDateStart');
+  const planAddInputEnd = document.querySelector('#planAddDateEnd');
+
+  const planAddPicker = new Datepicker(planAddInputStart, {
+    autohide: true,
+    nextArrow: '>',
+    prevArrow: '<',
+    format:'yyyy/mm/dd',
+    buttonClass: 'btn btn-helper text-white',
+    weekStart:1,
+    clearBtn:true,
+    todayBtn:true,
+    todayHighlight:true,
+  });
+
+
+
+  const planAddPicker2 = new Datepicker(planAddInputEnd, {
+    autohide: true,
+    nextArrow: '>',
+    prevArrow: '<',
+    format:'yyyy/mm/dd',
+    buttonClass: 'btn btn-helper text-white',
+    weekStart:1,
+    clearBtn:true,
+    todayBtn:true,
+    todayHighlight:true,
+    datesDisabled:['2021/09/25']
+  });
+</script>
+
+    <!-- 登入頁面 Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollabl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="LoginModalLabel">會員登入</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- 會員登入 -->
+            <form>
+              <div class="row mb-3">
+                <label for="LoginAccount" class="col-sm-2 col-form-label fs-5 fw-bold">帳戶</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="LoginAccount" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="LoginPwd" class="col-sm-2 col-form-label fs-5 fw-bold">密碼</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="LoginPwd" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="chkRemember">
+                    <label class="form-check-label" for="chkRemember">
+                      記住我
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mx-2 me-3">
+                <!-- <button type="button" class="btn btn-warning px-5 py-2 me-2" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</button> -->
+                <a type="button" class="btn btn-warning px-5 py-2 me-2" href="register_starter.html">註冊</a>
+                <button type="submit" class="btn btn-success px-5 py-2">登入</button>
+              </div>
+            </form>
+            <!-- 會員登入 -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 登入頁面 Modal-->
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="d-flex align-items-center mb-4 mb-md-10">
+          <div class="footer-logo"></div>
+          <div class="footer-border"></div>
+        </div>
+
+        <div class="row mb-4 mb-md-10">
+          <div class="col-md-4">
+            <h4 class="mb-2 mb-md-4">GroupFund  一同為未來計畫</h4>
+            <a href="mailto:service@example.com">service@example.com</a>
+          </div>
+          <div class="col-md-2">
+              <ul class="footer-nav-List">
+                <li class="mb-2"><a href="">關於我們</a></li>
+                <li class="mb-2"><a href="">常見問題</a></li>
+                <li class="mb-2"><a href="">最新消息</a></li>
+                <li><a href="">成功案例</a></li>
+              </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h5 class="fs-4 mb-4"><a href="planList.html">全部計畫</a></h5>
+            <ul class="footer-nav-List">
+              <li class="mb-2"><a href="">查看計畫</a></li>
+              <li><a href="">新增計畫</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-between align-items-center footer-bottom">
+            <p class="mb-0">©2021 GroupFund.</p>
+            <p class="d-none d-md-block"><a href="">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="">隱 私 權 政 策</a></p>
+            <p class="d-block d-md-none"><a href="">使用者條款</a><br><a href="">隱私權政策</a></p>
+            <button type="button" class="btn btn-helper text-white border rounded-pill">幫 助</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02QPKR3FNB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-02QPKR3FNB');
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/Javascript/tw-city-selector.min.js"></script>
+    <script src="./assets/Javascript/jquery.twzipcode.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script> -->
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
