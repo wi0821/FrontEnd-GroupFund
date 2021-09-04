@@ -1,0 +1,47 @@
+.planCard {
+    background: #FEF4F4;
+    border: none;
+	box-shadow: 7px 4px 15px 3px #D3D3D3;
+    &:hover {
+        background: #FFEDE6;
+        transition: 2s;
+    }
+
+    &--image {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 24px;
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .card-text {
+        font-size: 16px;
+        span {
+            font-size: 30px;
+            color: #f00;
+            font-weight: 700;
+        }
+    }
+
+    @include md() {
+        &--body {
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        .card-title {
+            font-size: 30px;
+        }
+
+        .card-text {
+            font-size: 24px;
+            span {
+                font-size: 48px;
+            }
+        }
+    }
+}

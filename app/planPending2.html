@@ -1,0 +1,102 @@
+---
+title: 待啟動計畫-大學畢業旅行
+layout: ./app/layout.ejs
+engine: ejs
+current: planPending2
+---
+
+<ul class="progressbar progressbarIcon">
+  <li class="active">規劃計畫<br><time>2017/07/21</time></li>
+  <li class="">計畫啟動<br><time>2018/01/01</time></li>
+  <li class="">預計完成<br><time>2020/06/30</time></li>
+</ul>
+<div class="container">
+  <p class="fs-4 px-11 py-8 bg-regular border-bottom border-2"><a href="javascript:history.back()"><i class="me-3 fas fa-arrow-circle-left"></i>回上頁</a></p>
+  <div class="planContentCard" >
+    <img class="d-block d-md-none mb-4" src="./assets/images/CardPic2.png">
+    <section class="text-black">
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planPendingTargetName" class="form-label fs-3">計畫名稱：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planPendingTargetName" id="planPendingTargetName" class="form-control-plaintext fw-bold fs-4" value="大學畢業旅行" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingCatalog" class="form-label fs-3">標　　的：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddPendingCatalog" id="planAddPendingCatalog" class="form-control-plaintext fs-4" value="旅遊" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingCount" class="form-label fs-3">人　　數：</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" name="planAddPendingCount" id="planAddPendingCount" class="form-control-plaintext fs-4" value="6" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingInviteName" class="form-label fs-3">參與人員：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddPendingInviteName" id="planAddPendingInviteName" class="form-control-plaintext fs-4" value="小明,小美" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingBankDebitMoney" class="form-label fs-3">扣款金額：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddPendingBankDebitMoney" id="planAddPendingBankDebitMoney" class="form-control-plaintext fs-4" value="6,666" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingTargetMoney" class="form-label fs-3">目標金額：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddPendingTargetMoney" id="planAddPendingTargetMoney" class="form-control-plaintext fs-4" value="200,000" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddPendingDate" class="form-label fs-3">規劃日期：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddPendingDate" id="planAddPendingDate" class="form-control-plaintext fs-4" value="2017/12/01" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddStartDate" class="form-label fs-3">啟動日期：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddStartDate" id="planAddStartDate" class="form-control-plaintext fs-4" value="2018/01/01" readonly>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-auto">
+        <label for="planAddEndDate" class="form-label fs-3">完成日期：</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="planAddEndDate" id="planAddEndDate" class="form-control-plaintext fs-4" value="2020/06/30" readonly>
+      </div>
+    </div>
+  </section>
+  <img class="d-none d-md-block" src="./assets/images/CardPic2.png">
+  </div>
+
+</div>

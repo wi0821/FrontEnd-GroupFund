@@ -11,14 +11,14 @@ current: planAdd
 <div class="planAdd container">
   <form class="planAdd--form form_setting" method="post" action="">
 
-    <div class="planAdd--form__progressbar">
+    <!-- <div class="planAdd--form__progressbar"> -->
       <ul class="progressbar">
         <li class="active">建立計畫</li>
         <li class="planAddStep2">連結帳戶及<br>選擇扣款日</li>
         <li class="planAddStep3">邀請合夥人</li>
         <li class="planAddStep4">建立成功</li>
       </ul>
-    </div>
+    <!-- </div> -->
                           <!-- 表單驗證 is-valid is-invalid  invalid-feedback-->
     <div class="planAdd--form__step1 needs-validation" novalidate>
       <div class="row">
@@ -55,7 +55,7 @@ current: planAdd
       <div class="col-6 mb-2">
         <label for="planAddTargetMoney" class="form-label fs-3">目標金額</label>
         <div class="input-group has-validation">
-          <input type="number" name="planAddTargetMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddTargetMoney" min="100000" max="10000000" placeholder="1,000,000" required>
+          <input type="number" name="planAddTargetMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddTargetMoney" min="10000" max="10000000" placeholder="1,000,000" required>
           <div class="input-group-text fs-4">NTD$</div>
           <div  class="invalid-feedback" id="planAddTargetMoneyFeedback">
             請輸入目標金額
