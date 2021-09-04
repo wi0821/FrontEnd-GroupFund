@@ -45,10 +45,10 @@
                 <a class="nav-link" href="#">關於我們</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">流程教學</a>
+                <a class="nav-link" href="#">常見問題</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">常見問題</a>
+                <a class="nav-link" href="#">成功案例</a>
               </li>
             </ul>
           </div>
@@ -63,14 +63,14 @@
 <div class="planAdd container">
   <form class="planAdd--form form_setting" method="post" action="">
 
-    <div class="planAdd--form__progressbar">
+    <!-- <div class="planAdd--form__progressbar"> -->
       <ul class="progressbar">
         <li class="active">建立計畫</li>
         <li class="planAddStep2">連結帳戶及<br>選擇扣款日</li>
         <li class="planAddStep3">邀請合夥人</li>
         <li class="planAddStep4">建立成功</li>
       </ul>
-    </div>
+    <!-- </div> -->
                           <!-- 表單驗證 is-valid is-invalid  invalid-feedback-->
     <div class="planAdd--form__step1 needs-validation" novalidate>
       <div class="row">
@@ -107,7 +107,7 @@
       <div class="col-6 mb-2">
         <label for="planAddTargetMoney" class="form-label fs-3">目標金額</label>
         <div class="input-group has-validation">
-          <input type="number" name="planAddTargetMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddTargetMoney" min="100000" max="10000000" placeholder="1,000,000" required>
+          <input type="number" name="planAddTargetMoney" class="is-invalid form-control" style="display: inline-block; text-align: right;" id="planAddTargetMoney" min="10000" max="10000000" placeholder="1,000,000" required>
           <div class="input-group-text fs-4">NTD$</div>
           <div  class="invalid-feedback" id="planAddTargetMoneyFeedback">
             請輸入目標金額
@@ -553,10 +553,10 @@
           </div>
 
           <div class="col-md-3">
-            <h5 class="fs-4 mb-4"><a href="planList.html">全部計畫</a></h5>
+            <h5 class="fs-4 mb-4"><a href="./planList.html">全部計畫</a></h5>
             <ul class="footer-nav-List">
-              <li class="mb-2"><a href="">查看計畫</a></li>
-              <li><a href="">新增計畫</a></li>
+              <li class="mb-2"><a href="./planProcessing.html">查看計畫</a></li>
+              <li><a href="./planAdd.html">新增計畫</a></li>
             </ul>
           </div>
         </div>

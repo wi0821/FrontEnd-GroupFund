@@ -29,6 +29,7 @@
   --bs-dark: #212529;
   --bs-black: #000;
   --bs-helper: #5985C7;
+  --bs-regular: #FEF4F4;
   --bs-font-sans-serif: "Ubuntu", "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -4397,6 +4398,47 @@ fieldset:disabled .btn {
   border-color: #5985C7;
 }
 
+.btn-regular {
+  color: #000;
+  background-color: #FEF4F4;
+  border-color: #FEF4F4;
+}
+
+.btn-regular:hover {
+  color: #000;
+  background-color: #fef6f6;
+  border-color: #fef5f5;
+}
+
+.btn-check:focus + .btn-regular, .btn-regular:focus {
+  color: #000;
+  background-color: #fef6f6;
+  border-color: #fef5f5;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(216, 207, 207, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(216, 207, 207, 0.5);
+}
+
+.btn-check:checked + .btn-regular,
+.btn-check:active + .btn-regular, .btn-regular:active, .btn-regular.active,
+.show > .btn-regular.dropdown-toggle {
+  color: #000;
+  background-color: #fef6f6;
+  border-color: #fef5f5;
+}
+
+.btn-check:checked + .btn-regular:focus,
+.btn-check:active + .btn-regular:focus, .btn-regular:active:focus, .btn-regular.active:focus,
+.show > .btn-regular.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(216, 207, 207, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(216, 207, 207, 0.5);
+}
+
+.btn-regular:disabled, .btn-regular.disabled {
+  color: #000;
+  background-color: #FEF4F4;
+  border-color: #FEF4F4;
+}
+
 .btn-outline-primary {
   color: #0d6efd;
   border-color: #0d6efd;
@@ -4734,6 +4776,40 @@ fieldset:disabled .btn {
 
 .btn-outline-helper:disabled, .btn-outline-helper.disabled {
   color: #5985C7;
+  background-color: transparent;
+}
+
+.btn-outline-regular {
+  color: #FEF4F4;
+  border-color: #FEF4F4;
+}
+
+.btn-outline-regular:hover {
+  color: #000;
+  background-color: #FEF4F4;
+  border-color: #FEF4F4;
+}
+
+.btn-check:focus + .btn-outline-regular, .btn-outline-regular:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(254, 244, 244, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(254, 244, 244, 0.5);
+}
+
+.btn-check:checked + .btn-outline-regular,
+.btn-check:active + .btn-outline-regular, .btn-outline-regular:active, .btn-outline-regular.active, .btn-outline-regular.dropdown-toggle.show {
+  color: #000;
+  background-color: #FEF4F4;
+  border-color: #FEF4F4;
+}
+
+.btn-check:checked + .btn-outline-regular:focus,
+.btn-check:active + .btn-outline-regular:focus, .btn-outline-regular:active:focus, .btn-outline-regular.active:focus, .btn-outline-regular.dropdown-toggle.show:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(254, 244, 244, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(254, 244, 244, 0.5);
+}
+
+.btn-outline-regular:disabled, .btn-outline-regular.disabled {
+  color: #FEF4F4;
   background-color: transparent;
 }
 
@@ -6424,6 +6500,16 @@ fieldset:disabled .btn {
   color: #2a405f;
 }
 
+.alert-regular {
+  color: #666262;
+  background-color: #fffdfd;
+  border-color: #fffcfc;
+}
+
+.alert-regular .alert-link {
+  color: #524e4e;
+}
+
 @-webkit-keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -6918,6 +7004,22 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #355077;
   border-color: #355077;
+}
+
+.list-group-item-regular {
+  color: #666262;
+  background-color: #fffdfd;
+}
+
+.list-group-item-regular.list-group-item-action:hover, .list-group-item-regular.list-group-item-action:focus {
+  color: #666262;
+  background-color: #e6e4e4;
+}
+
+.list-group-item-regular.list-group-item-action.active {
+  color: #fff;
+  background-color: #666262;
+  border-color: #666262;
 }
 
 .btn-close {
@@ -8151,6 +8253,14 @@ fieldset:disabled .btn {
   color: #7a9dd2;
 }
 
+.link-regular {
+  color: #FEF4F4;
+}
+
+.link-regular:hover, .link-regular:focus {
+  color: #fef6f6;
+}
+
 .ratio {
   position: relative;
   width: 100%;
@@ -8565,6 +8675,10 @@ fieldset:disabled .btn {
 
 .border-helper {
   border-color: #5985C7 !important;
+}
+
+.border-regular {
+  border-color: #FEF4F4 !important;
 }
 
 .border-white {
@@ -10436,6 +10550,10 @@ fieldset:disabled .btn {
   color: #5985C7 !important;
 }
 
+.text-regular {
+  color: #FEF4F4 !important;
+}
+
 .text-white {
   color: #fff !important;
 }
@@ -10498,6 +10616,10 @@ fieldset:disabled .btn {
 
 .bg-helper {
   background-color: #5985C7 !important;
+}
+
+.bg-regular {
+  background-color: #FEF4F4 !important;
 }
 
 .bg-body {
@@ -17450,7 +17572,27 @@ input[type=number] {
 
 .progressbar {
   counter-reset: step;
-  padding: 0;
+  padding: 0 2% 20%;
+  margin-bottom: 10%;
+}
+
+@media (min-width: 768px) {
+  .progressbar {
+    margin-bottom: 15%;
+    padding: 20px 15% 15%;
+  }
+}
+
+@media (min-width: 992px) {
+  .progressbar {
+    padding-bottom: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .progressbar {
+    margin-bottom: 5%;
+  }
 }
 
 .progressbar li {
@@ -17528,6 +17670,39 @@ input[type=number] {
   color: #dc3545;
 }
 
+.progressbarIcon {
+  margin-top: 40px;
+}
+
+.progressbarIcon li {
+  width: 33.33%;
+}
+
+.progressbarIcon li:first-child::before {
+  content: "\f073";
+}
+
+.progressbarIcon li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f274";
+}
+
+@media (min-width: 768px) {
+  .progressbarIcon li:before {
+    font-size: 36px;
+  }
+}
+
+.progressbarIcon li:last-child::before {
+  content: "\f005";
+}
+
+@media (min-width: 768px) {
+  .progressbarIcon {
+    margin-top: 72px;
+  }
+}
+
 .form_setting {
   padding: 50px 10%;
 }
@@ -17557,6 +17732,113 @@ input[type=number] {
   }
   .form_setting p {
     font-size: 20px;
+  }
+}
+
+.planCard {
+  background: #FEF4F4;
+  border: none;
+  -webkit-box-shadow: 7px 4px 15px 3px #D3D3D3;
+          box-shadow: 7px 4px 15px 3px #D3D3D3;
+}
+
+.planCard:hover {
+  background: #FFEDE6;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.planCard--image {
+  width: 100%;
+  height: auto;
+}
+
+.planCard .card-title {
+  font-size: 24px;
+}
+
+.planCard .card-title span {
+  font-size: 14px;
+}
+
+.planCard .card-text {
+  font-size: 16px;
+}
+
+.planCard .card-text span {
+  font-size: 30px;
+  color: #f00;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .planCard--body {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  .planCard .card-title {
+    font-size: 30px;
+  }
+  .planCard .card-text {
+    font-size: 24px;
+  }
+  .planCard .card-text span {
+    font-size: 48px;
+  }
+}
+
+.planContentCard {
+  background: #FEF4F4;
+  padding: 20px 10%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.planContentCard input {
+  color: #000;
+  background: #FDEEEE;
+  border: 1px solid #707070;
+}
+
+.planContentCard img {
+  border: none;
+  padding-left: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .planContentCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 40px 15%;
+  }
+  .planContentCard input {
+    color: #000;
+    background: none;
+    border: none;
+  }
+  .planContentCard img {
+    border-left: 2px solid #000;
+    padding-left: 5%;
   }
 }
 
@@ -17732,30 +18014,6 @@ input[type=number] {
 @media (min-width: 768px) {
   .planAdd--form {
     padding: 20px 5%;
-  }
-}
-
-.planAdd--form__progressbar {
-  padding: 0 2% 20%;
-  margin-bottom: 10%;
-}
-
-@media (min-width: 768px) {
-  .planAdd--form__progressbar {
-    margin-bottom: 15%;
-    padding: 20px 15% 15%;
-  }
-}
-
-@media (min-width: 992px) {
-  .planAdd--form__progressbar {
-    padding-bottom: 10%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .planAdd--form__progressbar {
-    margin-bottom: 5%;
   }
 }
 

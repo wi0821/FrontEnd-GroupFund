@@ -157,14 +157,14 @@ var validPlanAddStepInput1 = function validPlanAddStepInput1() {
     var money = planAddTargetMoney.valueAsNumber;
 
     if (money !== '') {
-      if (money >= 100000 && money <= 10000000) {
+      if (money >= 10000 && money <= 10000000) {
         $('#planAddTargetMoney').addClass('is-valid');
         $('#planAddTargetMoney').removeClass('is-invalid');
         planAddDoneTargetMoney.valueAsNumber = money;
       } else {
         $('#planAddTargetMoney').addClass('is-invalid');
         $('#planAddTargetMoney').removeClass('is-valid');
-        $('#planAddTargetMoneyFeedback').text('金額需介於100,000 ~ 10,000,000 之間');
+        $('#planAddTargetMoneyFeedback').text('金額需介於10,000 ~ 10,000,000 之間');
         planAddDoneTargetMoney.valueAsNumber = 0;
       }
     } else {
