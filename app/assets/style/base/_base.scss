@@ -33,5 +33,10 @@ input::-webkit-inner-spin-button {
 
 /* Firefox hiding arrows/spinners*/
 input[type=number] {
-  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
 }
