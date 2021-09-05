@@ -17703,6 +17703,10 @@ input[type="number"]:focus {
   content: "\f005";
 }
 
+.progressbarIcon li.failed::before {
+  content: '\f00d';
+}
+
 @media (min-width: 768px) {
   .progressbarIcon {
     margin-top: 72px;
@@ -17835,7 +17839,7 @@ input[type="number"]:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    padding: 40px 15%;
+    padding: 40px 5%;
   }
   .planContentCard input {
     color: #000;
