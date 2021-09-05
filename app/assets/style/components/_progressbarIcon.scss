@@ -18,6 +18,12 @@
             content:"\f005";
 
         }
+
+        &.failed {
+            &::before {
+                content:'\f00d';
+            }
+        }
     }
 
     @include md() {

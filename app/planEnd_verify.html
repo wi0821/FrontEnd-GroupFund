@@ -1,0 +1,28 @@
+---
+title: 請驗證電子信箱
+layout: ./app/layout.ejs
+engine: ejs
+current: planEnd_verify
+---
+
+<h2 class="title"><span>終止計畫</span></h2>
+<div class="register container">
+  <form class="form_setting register--form" method="" action="">
+    <div class="mb-md-20 mb-10 row">
+      <label for="registerEmail" class="col-md-4 col-form-label">電子信箱：</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control-plaintext" id="registerEmail" readonly name="registerEmail" value="example@emaple.com">
+      </div>
+    </div>
+
+    <div class="mb-md-20 mb-10 row text-black">
+      <p class="mb-4">請至信箱<span class="text-danger">點選確認信</span>，當認證完信箱後，便會通知其餘參與人終止計畫的相關資訊，待對方確認後，此計畫將會終止。</p>
+      <p>平台將依當初所簽立的使用者條款之若終止計畫之方法，依照當初匯款所存入的資金比例，退還至原帳戶。</p>
+    </div>
+
+    <div class="d-md-flex d-block">
+      <a href="./planFailed1.html" class="btn btn-outline-black fs-4 w-50 mb-5 me-4 px-5 py-2">同意終止</a>
+      <a href="javascript:history.back()" class="btn btn-danger fs-4 w-50 mb-5 ms-4 px-5 py-2">上一步</a>
+    </div>
+    </form>
+</div>
