@@ -7,7 +7,7 @@ current: register_starter
 
 <h2 class="title"><span class="registerTitle">填寫註冊資料</span></h2>
 <div class="register container">
-  <form class="form_setting register--form" method="post" action="">
+  <form class="form_setting register--form register--form__main" method="post">
     <div class="register--form__init">
       <div class="mb-md-15 mb-5 row">
         <label for="registerAccount" class="col-md-4 col-form-label">帳　　號：</label>
@@ -33,12 +33,13 @@ current: register_starter
         </div>
       </div>
 
-      <div class="mb-md-15 mb-5 row">
+      <!-- 保留 -->
+      <!-- <div class="mb-md-15 mb-5 row">
         <label for="registerIDName" class="col-md-4 col-form-label">暱　　稱：</label>
         <div class="col-md-8">
           <input type="text" class="form-control" id="registerIDName" name="registerIDName" placeholder="請輸入使用者名稱" required>
         </div>
-      </div>
+      </div> -->
 
     </div>
 
@@ -95,17 +96,44 @@ current: register_starter
           <input type="tel" class="form-control" id="registerPhone" name="registerPhone" placeholder="0912345678" minlength="10" maxlength="10" required>
         </div>
       </div>
+
+      <div class="mb-md-10 mb-5 row">
+        <p class="status text-danger fw-bold text-center"></p>
+      </div>
+
     </div>
 
       <div class="d-md-flex d-block">
         <button type="button" id="btnRegisterNext" class="btn btn-success w-100 mb-5 px-5 py-2">下一步</button>
         <div class="btnRegisterGroup d-none justify-content-center flex-grow-1">
           <button type="button" id="btnRegisterPrevious" class="btn btn-outline-danger w-50 mb-5 me-4 px-5 py-2">上一步</button>
-          <!-- <button type="submit" id="btnRegisterSend" class="btn btn-success w-50 mb-5 ms-4 px-5 py-2">註冊</button> -->
-          <a href="register_verify.html" class="btn btn-success w-50 fs-4 mb-5 ms-4 px-5 py-2">註冊</a>
+          <button type="submit" id="btnRegisterSend" class="btn btn-success w-50 mb-5 ms-4 px-5 py-2">註冊</button>
+          <!-- <a href="register_verify.html" class="btn btn-success w-50 fs-4 mb-5 ms-4 px-5 py-2">註冊</a> -->
         </div>
       </div>
   </form>
+
+  <div class="register--form__verify form_setting register--form d-none">
+    <div class="mb-md-20 mb-10 row">
+      <label for="registerVerifyEmail" class="col-md-4 col-form-label">電子信箱：</label>
+      <div class="col-md-8">
+        <input type="email" class="form-control-plaintext" id="registerVerifyEmail" name="registerVerifyEmail" readonly>
+      </div>
+    </div>
+
+    <div class="mb-md-20 mb-10 row text-black">
+      <p class="mb-4">請至信箱<span class="text-danger">點選確認信</span>，當認證完信箱後，便能進行下一步註冊</p>
+      <p>若信箱填寫錯誤，可點選回上一步，進行修改</p>
+    </div>
+
+    <div class="d-md-flex d-block">
+      <a href="javascript:history.back()" class="btn btn-outline-danger fs-4 w-50 mb-5 me-4 px-5 py-2">上一步</a>
+      <!-- <a href="user_profile.html" class="btn btn-success fs-4 w-50 mb-5 ms-4 px-5 py-2">確認註冊</a> -->
+      <a href="./planAdd.html" class="btn btn-success fs-4 w-50 mb-5 ms-4 px-5 py-2">確認註冊</a>
+      <!-- <button type="button" class="btn btn-outline-danger w-50 mb-5 me-4 px-5 py-2">上一步</button>
+      <button type="button" class="btn btn-success w-50 mb-5 ms-4 px-5 py-2">註冊</button> -->
+    </div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>

@@ -32,11 +32,32 @@ const twzipcode = $('#twzipcode').twzipcode();
 
 
 //自訂程式碼
-const registerTitle = document.querySelector('.registerTitle');
-// const registerCounty = document.querySelector('#registerCounty'); //通訊地址縣市選擇器
-// const registerDistrict = document.querySelector('#registerDistrict'); //通訊地址區域選擇器
-// const registerZipcode = document.querySelector('#registerZipcode'); //通訊地址郵遞區號
-// const registerAddress = document.querySelector('#registerAddress'); //通訊地址欄位
+//API 網址
+const urlLogin = 'https://group-fund.azurewebsites.net/api/Member/Login'; //登入API
+const urlRegister = 'https://group-fund.azurewebsites.net/api/Member/Register'; //註冊API
+
+
+//登入
+const inputAccount = document.querySelector('#LoginAccount'); //登入帳號欄位
+const inputPwd = document.querySelector('#LoginPwd'); //登入密碼欄位
+
+const btnLogin = document.querySelector('#btnLogin');  //登入按鈕
+const btnLogOut = document.querySelector('#btnLogOut'); //登出按鈕
+const statusText = document.querySelector(".status"); //狀態文字
+
+
+//註冊
+const registerTitle = document.querySelector('.registerTitle'); //頁面標題
+const registerAccount = document.querySelector('#registerAccount'); //註冊帳號
+const registerPwd = document.querySelector('#registerPwd'); // 註冊密碼
+const registerEmail = document.querySelector('#registerEmail'); //註冊email
+const registerName = document.querySelector('#registerName'); //註冊姓名
+const registerPhone = document.querySelector('#registerPhone'); //註冊電話
+
+const btnRegisterSend = document.querySelector('#btnRegisterSend'); // 註冊確認按鈕
+
+//驗證電子信箱
+const registerVerifyEmail = document.querySelector('#registerVerifyEmail');
 
 //新增計畫步驟1~2
 const planAddName = document.querySelector('#planAddName'); //真實姓名
@@ -69,16 +90,14 @@ const planAddDoneBankDebitDate = document.querySelector('#planAddDoneBankDebitDa
 const planAddDoneBankDebitMoney = document.querySelector('#planAddDoneBankDebitMoney'); //使用者所設置扣款金額
 
 const validRegisterInput = () => {
-  const registerAccount = document.querySelector("#registerAccount").value;
-  const registerPwd = document.querySelector("#registerPwd").value;
   const registerConfirmPwd = document.querySelector("#registerConfirmPwd").value;
 
   if (registerAccount.length < 6 || registerAccount.length > 30) {
     $('#registerAccountError').removeClass('d-none');
-  } else if (registerPwd.length < 8) {
+  } else if (registerPwd.value.length < 8) {
     $('#registerAccountError').addClass('d-none');
     $('#registerPwdError').removeClass('d-none');
-  } else if (registerPwd !== registerConfirmPwd) {
+  } else if (registerPwd.value !== registerConfirmPwd) {
     $('#registerPwdError').addClass('d-none');
     $('#registerConfirmPwdError').removeClass('d-none');
   } else {
@@ -269,6 +288,101 @@ const validPlanAddStepInput3 = () => {
 const validPlanAddCheck = inputId => {
   return inputId.getAttribute('class').includes('is-valid');
 }
+
+const AccountRegister = () => {
+  let bodyFormData = new FormData();
+  bodyFormData.append('Account', registerAccount.value);
+  bodyFormData.append('Password', registerPwd.value);
+  bodyFormData.append('Name', registerName.value);
+  bodyFormData.append('Email', registerEmail.value);
+  bodyFormData.append('Phone', registerPhone.value);
+  bodyFormData.append('IsAdmin', false);
+
+  axios({
+      method: "post",
+      url: urlRegister,
+      data: bodyFormData,
+      headers: { "Content-Type": "multipart/form-data"}
+  })
+  .then(response => {
+      //handle success
+      //驗證電子信箱
+      console.log(response);
+      $('.register--form__main').addClass('d-none');
+      $('.register--form__verify').removeClass('d-none');
+      // window.location = "register_verify.html";
+      registerVerifyEmail.value = registerEmail.value
+      registerTitle.textContent = "驗證電子信箱";
+
+  })
+  .catch(error => {
+      //handle error
+      statusText.textContent = "資料填寫錯誤";
+      console.log(error);
+  });
+
+}
+
+const Login = () => {
+
+  let bodyFormData = new FormData();
+  bodyFormData.append('Account', inputAccount.value);
+  bodyFormData.append('Password', inputPwd.value);
+
+  // bodyFormData.append('Account', 'n1066456');
+  // bodyFormData.append('Password', 'Da215102');
+
+  axios({
+      method: "post",
+      url: urlLogin,
+      data: bodyFormData,
+      headers: { "Content-Type": "multipart/form-data"}
+  })
+  .then(response => {
+    //handle success
+    // statusText.textContent = response.statusText;
+    statusText.textContent = "登入成功";
+    console.log(response);
+    localStorage.setItem("loggedIn", response.data.token);
+    console.log(localStorage);
+})
+.catch(error => {
+    //handle error
+    statusText.textContent = "帳號或密碼錯誤";
+    console.log(error);
+});
+
+}
+
+
+//登入按鈕
+
+btnLogin.addEventListener('click', (e) => {
+  e.preventDefault();
+  Login();
+  console.log(inputAccount.value);
+  console.log(inputPwd.value);
+})
+
+//登出按鈕
+btnLogOut.addEventListener("click",(e)=> {
+  e.preventDefault();
+  localStorage.removeItem('loggedIn');
+  console.log(localStorage.getItem('loggedIn'));
+  statusText.textContent = "登出成功";
+})
+
+//註冊按鈕
+btnRegisterSend.addEventListener('click', (e) => {
+  e.preventDefault();
+  AccountRegister();
+})
+
+registerEmail.addEventListener('change', (e) => {
+  registerVerifyEmail.value = registerEmail.value;
+
+})
+
 
 //JQuery 開始
 $(document).ready( () => {
