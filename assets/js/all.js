@@ -456,15 +456,15 @@ $(document).ready(function () {
 
   $('#btnplanAddSubmit').click(function (e) {}); //常見問題 icon更換
 
-  $('#faqIcon1').click(function (e) {
+  $('#faqBtn1').click(function (e) {
     $('#faqIcon1').toggleClass('fa-minus-circle');
     $('#faqIcon1').toggleClass('fa-plus-circle');
   });
-  $('#faqIcon2').click(function (e) {
+  $('#faqBtn2').click(function (e) {
     $('#faqIcon2').toggleClass('fa-minus-circle');
     $('#faqIcon2').toggleClass('fa-plus-circle');
   });
-  $('#faqIcon3').click(function (e) {
+  $('#faqBtn3').click(function (e) {
     $('#faqIcon3').toggleClass('fa-minus-circle');
     $('#faqIcon3').toggleClass('fa-plus-circle');
   });
