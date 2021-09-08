@@ -355,37 +355,39 @@ const Login = () => {
 }
 
 
-//登入按鈕
 
-btnLogin.addEventListener('click', (e) => {
+//JQuery 開始
+$(document).ready( () => {
+
+//登入按鈕
+$('#btnLogin').click( e=> {
   e.preventDefault();
   Login();
   console.log(inputAccount.value);
   console.log(inputPwd.value);
-})
+});
 
 //登出按鈕
-btnLogOut.addEventListener("click",(e)=> {
+$('#btnLogOut').click( e=> {
   e.preventDefault();
   localStorage.removeItem('loggedIn');
   console.log(localStorage.getItem('loggedIn'));
   statusText.textContent = "登出成功";
-})
 
-//註冊按鈕
-btnRegisterSend.addEventListener('click', (e) => {
+});
+
+//註冊資料按鈕
+$('#btnRegisterSend').click( e=> {
   e.preventDefault();
   AccountRegister();
-})
+});
 
-registerEmail.addEventListener('change', (e) => {
+//監聽註冊email並寫入到驗證頁面
+$('#registerEmail').change( e=> {
   registerVerifyEmail.value = registerEmail.value;
+});
 
-})
 
-
-//JQuery 開始
-$(document).ready( () => {
   $('#btnRegisterNext').click( e => {
     validRegisterInput();
   });
@@ -463,6 +465,22 @@ $(document).ready( () => {
       //送出按鈕
   $('#btnplanAddSubmit').click (e => {
 
+  });
+
+  //常見問題 icon更換
+  $('#faqIcon1').click (e => {
+    $('#faqIcon1').toggleClass('fa-minus-circle');
+    $('#faqIcon1').toggleClass('fa-plus-circle');
+  });
+
+  $('#faqIcon2').click (e => {
+    $('#faqIcon2').toggleClass('fa-minus-circle');
+    $('#faqIcon2').toggleClass('fa-plus-circle');
+  });
+
+  $('#faqIcon3').click (e => {
+    $('#faqIcon3').toggleClass('fa-minus-circle');
+    $('#faqIcon3').toggleClass('fa-plus-circle');
   });
 
 });

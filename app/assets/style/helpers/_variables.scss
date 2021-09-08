@@ -89,7 +89,9 @@ $theme-colors: (
   "dark":       $dark,
   "black":      $black,
   "helper":      #5985C7,
-  "regular":    #FEF4F4
+  "regular":    #FEF4F4,
+  "collbefore":    #FDEDED,
+  "collafter":    #FBDDDD
 ) !default;
 // scss-docs-end theme-colors-map
 
