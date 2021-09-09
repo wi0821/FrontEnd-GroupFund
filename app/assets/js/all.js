@@ -22,15 +22,6 @@ AOS.init({
 
 });
 
- //台灣縣市地區選擇器
- //文檔：https://github.com/essoduke/jQuery-TWzipcode
-const twzipcode = $('#twzipcode').twzipcode();
-// const twzipcode = new TWzipcode();
-
-// let get = twzipcode.get('country').value;
-// console.log(get);
-
-
 //自訂程式碼
 //API 網址
 const urlLogin = 'https://group-fund.azurewebsites.net/api/Member/Login'; //登入API
@@ -343,6 +334,7 @@ const Login = () => {
     // statusText.textContent = response.statusText;
     statusText.textContent = "登入成功";
     console.log(response);
+    window.location = "planList.html";
     localStorage.setItem("loggedIn", response.data.token);
     console.log(localStorage);
 })
@@ -366,6 +358,7 @@ $('#btnLogin').click( e=> {
   console.log(inputAccount.value);
   console.log(inputPwd.value);
 });
+
 
 //登出按鈕
 $('#btnLogOut').click( e=> {
@@ -468,19 +461,16 @@ $('#registerEmail').change( e=> {
   });
 
   //常見問題 icon更換
-  $('#faqIcon1').click (e => {
-    $('#faqIcon1').toggleClass('fa-minus-circle');
-    $('#faqIcon1').toggleClass('fa-plus-circle');
+  $('#faqBtn1').click (e => {
+    $('#faqIcon1').toggleClass('fa-minus-circle fa-plus-circle');
   });
 
-  $('#faqIcon2').click (e => {
-    $('#faqIcon2').toggleClass('fa-minus-circle');
-    $('#faqIcon2').toggleClass('fa-plus-circle');
+  $('#faqBtn2').click (e => {
+    $('#faqIcon2').toggleClass('fa-minus-circle fa-plus-circle');
   });
 
-  $('#faqIcon3').click (e => {
-    $('#faqIcon3').toggleClass('fa-minus-circle');
-    $('#faqIcon3').toggleClass('fa-plus-circle');
+  $('#faqBtn3').click (e => {
+    $('#faqIcon3').toggleClass('fa-minus-circle fa-plus-circle');
   });
 
 });

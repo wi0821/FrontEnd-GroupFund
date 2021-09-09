@@ -33,13 +33,6 @@ current: register_starter
         </div>
       </div>
 
-      <!-- 保留 -->
-      <!-- <div class="mb-md-15 mb-5 row">
-        <label for="registerIDName" class="col-md-4 col-form-label">暱　　稱：</label>
-        <div class="col-md-8">
-          <input type="text" class="form-control" id="registerIDName" name="registerIDName" placeholder="請輸入使用者名稱" required>
-        </div>
-      </div> -->
 
     </div>
 
@@ -137,6 +130,9 @@ current: register_starter
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="./assets/Javascript/jquery.twzipcode.min.js"></script>
+
 
 <script>
   const birthDateInput = document.querySelector('input[name="registerBirthDay"]');
@@ -150,4 +146,10 @@ current: register_starter
   weekStart:1,
   clearBtn:true,
 });
+</script>
+
+<script>
+   //台灣縣市地區選擇器
+ //文檔：https://github.com/essoduke/jQuery-TWzipcode
+  const twzipcode = $('#twzipcode').twzipcode();
 </script>

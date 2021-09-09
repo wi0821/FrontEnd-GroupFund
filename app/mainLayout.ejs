@@ -32,14 +32,14 @@
           <div class="row mb-4 mb-md-10">
             <div class="col-md-4">
               <h4 class="mb-2 mb-md-4">GroupFund  一同為未來計畫</h4>
-              <a href="mailto:service@example.com">service@example.com</a>
+              <a href="mailto:help@group-fund.online">help@group-fund.online</a>
             </div>
             <div class="col-md-2">
                 <ul class="footer-nav-List">
-                  <li class="mb-2"><a href="">關於我們</a></li>
+                  <li class="mb-2"><a href="./aboutUs.html">關於我們</a></li>
                   <li class="mb-2"><a href="./faq.html">常見問題</a></li>
-                  <li class="mb-2"><a href="">最新消息</a></li>
-                  <li><a href="">成功案例</a></li>
+                  <li class="mb-2"><a href="#">最新消息</a></li>
+                  <li><a href="./success-story.html">成功案例</a></li>
                 </ul>
             </div>
 
@@ -56,12 +56,68 @@
               <p class="mb-0">©2021 GroupFund.</p>
               <p class="d-none d-md-block"><a href="./terms-of-service.html">使 用 者 條 款</a><span class="border-start border-black mx-2"></span><a href="./privacy-of-policy.html">隱 私 權 政 策</a></p>
               <p class="d-block d-md-none"><a href="./terms-of-service.html">使用者條款</a><br><a href="./privacy-of-policy.html">隱私權政策</a></p>
-              <button type="button" class="btn btn-helper text-white border rounded-pill">幫 助</button>
+              <a href="mailto:help@group-fund.online" class="btn btn-helper fs-6 text-white rounded-pill">幫 助</a>
             </div>
           </div>
         </div>
       </footer>
   </div>
+
+    <!-- 登入頁面 Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollabl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="LoginModalLabel">會員登入</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- 會員登入 -->
+            <form>
+              <div class="row mb-3">
+                <label for="LoginAccount" class="col-sm-2 col-form-label fs-5 fw-bold">帳戶</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="LoginAccount" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="LoginPwd" class="col-sm-2 col-form-label fs-5 fw-bold">密碼</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="LoginPwd" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="chkRemember">
+                    <label class="form-check-label" for="chkRemember">
+                      記住我
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <p class="status text-danger fw-bold"></p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mx-2 me-3">
+                <a type="button" class="btn btn-warning px-5 py-2 me-2" href="register.html">註冊</a>
+                <button type="submit" id="btnLogin" class="btn btn-success px-5 py-2 me-2">登入</button>
+                <!-- <button type="submit" id="btnLogOut" class="btn btn-outline-danger px-5 py-2">登出</button> -->
+              </div>
+            </form>
+            <!-- 會員登入 -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 登入頁面 Modal-->
+
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-02QPKR3FNB"></script>
     <script>
