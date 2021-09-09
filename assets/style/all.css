@@ -18333,4 +18333,29 @@ input[type="number"]:focus {
   padding: 4px 8px;
 }
 
+.user-story-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(195, 238, 248, 0.5)), color-stop(0.01%, rgba(195, 238, 248, 0.117393)), color-stop(19.27%, rgba(195, 238, 248, 0.0916772)), color-stop(23.97%, rgba(195, 238, 248, 0.0802469)), color-stop(46.2%, rgba(195, 238, 248, 0.184734)), color-stop(88.01%, rgba(195, 238, 248, 0.100717)), to(rgba(195, 238, 248, 0.485)));
+  background: -o-linear-gradient(top, rgba(195, 238, 248, 0.5) 0%, rgba(195, 238, 248, 0.117393) 0.01%, rgba(195, 238, 248, 0.0916772) 19.27%, rgba(195, 238, 248, 0.0802469) 23.97%, rgba(195, 238, 248, 0.184734) 46.2%, rgba(195, 238, 248, 0.100717) 88.01%, rgba(195, 238, 248, 0.485) 100%);
+  background: linear-gradient(180deg, rgba(195, 238, 248, 0.5) 0%, rgba(195, 238, 248, 0.117393) 0.01%, rgba(195, 238, 248, 0.0916772) 19.27%, rgba(195, 238, 248, 0.0802469) 23.97%, rgba(195, 238, 248, 0.184734) 46.2%, rgba(195, 238, 248, 0.100717) 88.01%, rgba(195, 238, 248, 0.485) 100%);
+  border-radius: 65px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-story-card img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
 /*# sourceMappingURL=all.css.map */
